@@ -37,17 +37,11 @@ namespace SharedResources.Model
             }
         }
 
-        private string _formattedCreatedDate;
         public string FormattedCreatedDate
         {
             get
             {
                 return " " + DateUtility.FormatDate(CreatedDate);
-            }
-            set
-            {
-                _formattedCreatedDate = value;
-                onPropertyChanged("FormattedCreatedDate");
             }
         }
 
