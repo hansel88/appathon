@@ -27,7 +27,26 @@ namespace ScrumApp.ViewModel
         {
             UserStory = new Story();
             UserStory.Description = "Random description. blablablablablablabla. blablalbllalblalbal";
-            UserStory.Description
+            UserStory.Title = "Random Title";
+
+            User tempUser = new User();
+            tempUser.UserName = "random username";
+            tempUser.RealName = "Hans Petter Naumann";
+            UserStory.Author = tempUser;
+            UserStory.CreatedDate = DateTime.Now;
+
+            Comment c1 = new Comment();
+            c1.Author = tempUser;
+            c1.Text = "random comment. blabla";
+            c1.TimeStamp = DateTime.Now;
+
+            Comment c2 = new Comment();
+            c2.Author = tempUser;
+            c2.Text = "random comment number 2. blabla";
+            c2.TimeStamp = DateTime.Now;
+
+            UserStory.Comments.Add(c1);
+            UserStory.Comments.Add(c2);
         }
 
     }

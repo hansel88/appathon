@@ -9,6 +9,6 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-
+        <Button x:Name="testButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="300" Content="detailStoryView"/>
     </Grid>
 </Page>

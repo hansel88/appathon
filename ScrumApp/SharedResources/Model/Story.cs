@@ -23,6 +23,34 @@ namespace SharedResources.Model
             }
         }
 
+        private DateTime _createdDate;
+        public DateTime CreatedDate
+        {
+            get
+            {
+                return _createdDate;
+            }
+            set
+            {
+                _createdDate = value;
+                onPropertyChanged("CreatedDate");
+            }
+        }
+
+        private string _formattedCreatedDate;
+        public string FormattedCreatedDate
+        {
+            get
+            {
+                return DateUtility.FormatDate(CreatedDate);
+            }
+            set
+            {
+                _formattedCreatedDate = value;
+                onPropertyChanged("FormattedCreatedDate");
+            }
+        }
+
         private string _description;
         public string Description
         {
