@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SharedResources.Model;
+using SharedResources.Utilities;
 
 namespace ScrumApp.ViewModel
 {
@@ -25,6 +26,11 @@ namespace ScrumApp.ViewModel
 
         public DetailStoryViewModel()
         {
+            if (NavigationUtility.PassedObject != null && NavigationUtility.PassedObject is Story)
+            {
+                UserStory = NavigationUtility.PassedObject as Story;
+            }
+
             UserStory = new Story();
             UserStory.Description = "Random description. blablablablablablabla. blablalbllalblalbal";
             UserStory.Title = "Random Title";

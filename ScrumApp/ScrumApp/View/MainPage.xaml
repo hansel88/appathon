@@ -9,6 +9,10 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="testButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="300" Content="detailStoryView" Click="testButton_Click_1"/>
+        <StackPanel Orientation="Vertical" Margin="0,30">
+              <Button x:Name="testButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="detailStoryView" Click="testButton_Click_1"/>
+              <Button x:Name="SprintViewTestButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="SprintView" Click="SprintViewTestButton_Click_1"/>
+        </StackPanel>
+
     </Grid>
 </Page>

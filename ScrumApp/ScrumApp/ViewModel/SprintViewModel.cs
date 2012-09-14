@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ScrumApp.ViewModel;
 using SharedResources.Model;
+using SharedResources.Utilities;
 
 namespace ScrumApp.ViewModel
 {
@@ -96,7 +97,30 @@ namespace ScrumApp.ViewModel
 
         public SprintViewModel()
         {
-            
+            if (NavigationUtility.PassedObject != null && NavigationUtility.PassedObject is Sprint)
+            {
+                CurrentSprint = NavigationUtility.PassedObject as Sprint;
+
+                foreach (Story story in CurrentSprint.Stories)
+                {
+                    switch (story.State)
+                    {
+                        case StoryStates.Closed: Closed.Add(story);
+                            break;
+                        case StoryStates.InAnalysis: InAnalysis.Add(story);
+                            break;
+                        case StoryStates.InProgress: InProgress.Add(story);
+                            break;
+                        case StoryStates.Open: Open.Add(story);
+                            break;
+                        case StoryStates.Testing: Testing.Add(story);
+                            break;
+                        case StoryStates.Unassigned:
+                            break;
+                    }
+                }
+            }
+
         }
     }
 }
