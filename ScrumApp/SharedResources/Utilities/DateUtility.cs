@@ -11,8 +11,21 @@ namespace SharedResources.Utilities
         private static string[] MONTH_NAMES = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 
         public static string FormatDate(DateTime date)
+        
         {
-            return date.Day + ". " + MONTH_NAMES[date.Month - 1];
+            string dayString = "";
+            switch (date.Day)
+                    {
+                        case 1: dayString = "st "; break;
+                        case 2: dayString = "nd "; break;
+                        case 3: dayString = "rd "; break;
+                        case 21: dayString = "st "; break;
+                        case 22: dayString = "nd "; break;
+                        case 23: dayString = "rd "; break;
+                        case 31: dayString = "st "; break;
+                        default: dayString = "th "; break;
+                    }
+            return MONTH_NAMES[date.Month - 1] + " " + date.Day + dayString;
         }
 
         public static string FormatDay(DateTime date, bool uppercase = true)

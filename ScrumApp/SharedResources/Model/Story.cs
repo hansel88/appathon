@@ -163,7 +163,7 @@ namespace SharedResources.Model
             }
         }
 
-        private List<Comment> _comments;
+        private List<Comment> _comments = new List<Comment>();
         public List<Comment> Comments
         {
             get

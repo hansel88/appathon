@@ -34,6 +34,11 @@ namespace ScrumApp
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            
+        }
+
+        private void testButton_Click_1(object sender, RoutedEventArgs e)
+        {
             this.Frame.Navigate(typeof(DetailStoryView));
         }
 

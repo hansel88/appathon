@@ -9,18 +9,27 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-                <TextBlock x:Name="TitleBox" Foreground="Orange" Text="{Binding UserStory.Title}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,100"/>
+        <TextBlock x:Name="TitleBox" FontSize="70" Foreground="Orange" Text="{Binding UserStory.Title}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,100"/>
         <StackPanel Orientation="Horizontal" Margin="0, 200" HorizontalAlignment="Center">
-            <TextBlock Foreground="Orange" Text="Created on " />
-            <TextBlock Foreground="Orange" Text="{Binding UserStory.FormattedCreatedDate}" />
-            <TextBlock Foreground="Orange" Text=" by " />
-            <TextBlock Foreground="Orange" Text="{Binding UserStory.Author.RealName}" />
+            <TextBlock FontSize="40" Foreground="Orange" Text="Created on " />
+            <TextBlock FontSize="40" Foreground="Orange" Text="{Binding UserStory.FormattedCreatedDate}" />
+            <TextBlock FontSize="40" Foreground="Orange" Text=" by " />
+            <TextBlock FontSize="40" Foreground="Orange" Text="{Binding UserStory.Author.RealName}" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,200">
             <TextBlock x:Name="DescriptionBox" Foreground="Orange" Text="{Binding UserStory.Description}" Width="400" TextWrapping="Wrap" />
             <ListBox x:Name="CommentList" ItemsSource="{Binding UserStory.Comments}">
-                <TextBlock Foreground="White" Text="{Binding Author.RealName}" />
-                <TextBlock Foreground="White" Text="{Binding Text}" />
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <ListBoxItem>
+                            <StackPanel>
+                                <TextBlock FontSize="50" Foreground="White" Text="{Binding Author.RealName}" />
+                                <TextBlock FontSize="40" Foreground="White" Text="{Binding Text}" />              
+                            </StackPanel>
+                        </ListBoxItem>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                
             </ListBox>
         </StackPanel>
 
