@@ -22,5 +22,13 @@ namespace ScrumApp.ViewModel
                 onPropertyChanged("UserStory");
             }
         }
+
+        public DetailStoryViewModel()
+        {
+            UserStory = new Story();
+            UserStory.Description = "Random description. blablablablablablabla. blablalbllalblalbal";
+            UserStory.Description
+        }
+
     }
 }

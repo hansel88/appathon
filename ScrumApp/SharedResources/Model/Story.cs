@@ -148,5 +148,19 @@ namespace SharedResources.Model
                 onPropertyChanged("Comments");
             }
         }
+
+        private bool _isBlocked = false;
+        public bool IsBlocked
+        {
+            get
+            {
+                return _isBlocked;
+            }
+            set
+            {
+                _isBlocked = value;
+                onPropertyChanged("IsBlocked");
+            }
+        }
     }
 }
