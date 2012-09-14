@@ -10,21 +10,17 @@
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Margin="40,0">
         <TextBlock x:Name="TitleBox" FontSize="70" Foreground="Orange" Text="{Binding UserStory.Title}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,100"/>
-        <StackPanel Orientation="Horizontal" Margin="0, 200" HorizontalAlignment="Center">
-            <TextBlock FontSize="25" Foreground="Orange" xml:space="preserve" Text="Created on" />
-            <TextBlock FontSize="25" Foreground="Orange" Text="{Binding UserStory.FormattedCreatedDate}" />
-            <TextBlock FontSize="25" Foreground="Orange" xml:space="preserve" Text=" by " />
-            <TextBlock FontSize="25" Foreground="Orange" Text="{Binding UserStory.Author.RealName}" />
-        </StackPanel>
+        <TextBlock FontSize="25" Foreground="Orange" Text="{Binding UserStory.CreatedString}" Margin="0, 200" HorizontalAlignment="Center"/>
+
         <StackPanel Orientation="Horizontal" Margin="0,300" HorizontalAlignment="Center">
             <TextBlock x:Name="DescriptionBox" Foreground="Orange" FontSize="35" Text="{Binding UserStory.Description}" Width="500" TextWrapping="Wrap" />
             <StackPanel Orientation="Vertical">
                     <TextBlock Foreground="Orange" FontSize="35" Text="Comments:"/>
-                    <ListBox x:Name="CommentList" HorizontalAlignment="Right" Width="400" Height="500" ItemsSource="{Binding UserStory.Comments}">
+                    <ListBox x:Name="CommentList" Background="Transparent" HorizontalAlignment="Right" Width="400" Height="500" ItemsSource="{Binding UserStory.Comments}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <ListBoxItem>
-                                <StackPanel Margin="0,0,0,15" Background="Transparent">
+                                <StackPanel Margin="0,0,0,10">
                                     <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Author.RealName}" />
                                     <TextBlock FontSize="25" TextWrapping="Wrap" Foreground="White" Text="{Binding Text}" />
                                 </StackPanel>

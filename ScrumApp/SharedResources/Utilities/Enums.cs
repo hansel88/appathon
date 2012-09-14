@@ -8,6 +8,6 @@ namespace SharedResources.Utilities
 {
     public enum StoryStates
     {
-        Open, InAnalysis, InProgress, Testing, Closed
+        Unassigned, Open, InAnalysis, InProgress, Testing, Closed
     }
 }

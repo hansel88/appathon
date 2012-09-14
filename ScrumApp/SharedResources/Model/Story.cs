@@ -41,7 +41,15 @@ namespace SharedResources.Model
         {
             get
             {
-                return " " + DateUtility.FormatDate(CreatedDate);
+                return DateUtility.FormatDate(CreatedDate);
+            }
+        }
+
+        public string CreatedString
+        {
+            get
+            {
+                return "Created on "  + DateUtility.FormatDate(CreatedDate) + " by " + Author.RealName;
             }
         }
 

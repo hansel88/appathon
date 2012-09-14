@@ -27,7 +27,7 @@ namespace SharedResources.Model
         {
             get
             {
-                return " " + _realName;
+                return _realName;
             }
             set
             {
