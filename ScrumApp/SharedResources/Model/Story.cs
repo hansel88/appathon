@@ -42,7 +42,7 @@ namespace SharedResources.Model
         {
             get
             {
-                return DateUtility.FormatDate(CreatedDate);
+                return " " + DateUtility.FormatDate(CreatedDate);
             }
             set
             {
