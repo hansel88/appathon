@@ -31,6 +31,7 @@ namespace ScrumApp.ViewModel
                 UserStory = NavigationUtility.PassedObject as Story;
             }
 
+            //temp drit
             UserStory = new Story();
             UserStory.Description = "Random description. blablablablablablabla. blablalbllalblalbal";
             UserStory.Title = "Random Title";
