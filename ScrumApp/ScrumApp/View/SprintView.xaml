@@ -39,23 +39,23 @@
         </Grid>
         
         <StackPanel Orientation="Horizontal">
-            <ListBox>
+            <ListBox x:Name="OpenList" ItemsSource="{Binding Open}">
                 
             </ListBox>
             
-            <ListBox>
+            <ListBox x:Name="InAnalysisList" ItemsSource="{Binding InAnalysis}">
                 
             </ListBox>
             
-            <ListBox>
+            <ListBox x:Name="InProgressList" ItemsSource="{Binding InProgress}">
                 
             </ListBox>
             
-            <ListBox>
+            <ListBox x:Name="TestingList" ItemsSource="{Binding Testing}">
                 
             </ListBox>
             
-            <ListBox>
+            <ListBox x:Name="ClosedList" ItemsSource="{Binding Closed}">
                 
             </ListBox>
         </StackPanel>
