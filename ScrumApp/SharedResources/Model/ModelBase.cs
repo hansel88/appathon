@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace SharedResources.Model
 {
-    class ModelBase : INotifyPropertyChanged
+    public class ModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
