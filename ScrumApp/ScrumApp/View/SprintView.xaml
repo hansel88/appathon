@@ -38,25 +38,65 @@
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
         
-        <StackPanel Orientation="Horizontal">
-            <ListBox x:Name="OpenList" ItemsSource="{Binding Open}">
-                
+        <StackPanel Orientation="Horizontal" Margin="20,150">
+            <ListBox x:Name="OpenList" ItemsSource="{Binding Open}" Width="200">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <ListBoxItem>
+                            <StackPanel Margin="0,0,0,10">
+                                <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}" />
+                            </StackPanel>
+                        </ListBoxItem>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
             
-            <ListBox x:Name="InAnalysisList" ItemsSource="{Binding InAnalysis}">
-                
+            <ListBox x:Name="InAnalysisList" ItemsSource="{Binding InAnalysis}"  Width="200">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <ListBoxItem>
+                            <StackPanel Margin="0,0,0,10">
+                                <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}" />
+                            </StackPanel>
+                        </ListBoxItem>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
             
-            <ListBox x:Name="InProgressList" ItemsSource="{Binding InProgress}">
-                
+            <ListBox x:Name="InProgressList" ItemsSource="{Binding InProgress}"  Width="200">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <ListBoxItem>
+                            <StackPanel Margin="0,0,0,10">
+                                <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}" />
+                            </StackPanel>
+                        </ListBoxItem>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
             
-            <ListBox x:Name="TestingList" ItemsSource="{Binding Testing}">
-                
+            <ListBox x:Name="TestingList" ItemsSource="{Binding Testing}"  Width="200">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <ListBoxItem>
+                            <StackPanel Margin="0,0,0,10">
+                                <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}" />
+                            </StackPanel>
+                        </ListBoxItem>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
             
-            <ListBox x:Name="ClosedList" ItemsSource="{Binding Closed}">
-                
+            <ListBox x:Name="ClosedList" ItemsSource="{Binding Closed}"  Width="200">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <ListBoxItem>
+                            <StackPanel Margin="0,0,0,10">
+                                <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}" />
+                            </StackPanel>
+                        </ListBoxItem>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
 
