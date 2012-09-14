@@ -2,9 +2,11 @@
 using System.Net;
 using System.Windows;
 using Windows.UI.Xaml;
+using System.
 
 
-namespace SharedResources.Utilities
+
+using Windows.UI.Xaml.Controls;namespace SharedResources.Utilities
 {
     public static class NavigationUtility
     {
@@ -19,13 +21,13 @@ namespace SharedResources.Utilities
             }
         }
 
-        public static void NavigateTo(object target)
+        public static void NavigateTo(object target, Frame frame)
         {
             Uri uri = null;
           
             if (uri != null && target != null)
             {
-                (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(uri);
+                frame.Navigate(typeof(Uri;
             }
         }
     }
