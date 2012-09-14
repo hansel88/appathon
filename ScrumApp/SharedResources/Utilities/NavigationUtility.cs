@@ -2,11 +2,9 @@
 using System.Net;
 using System.Windows;
 using Windows.UI.Xaml;
-using System.
+using Windows.UI.Xaml.Controls;
 
-
-
-using Windows.UI.Xaml.Controls;namespace SharedResources.Utilities
+namespace SharedResources.Utilities
 {
     public static class NavigationUtility
     {
@@ -21,14 +19,10 @@ using Windows.UI.Xaml.Controls;namespace SharedResources.Utilities
             }
         }
 
-        public static void NavigateTo(object target, Frame frame)
+        public static void NavigateTo(Type page, object objectToBePassed, Frame frame)
         {
-            Uri uri = null;
-          
-            if (uri != null && target != null)
-            {
-                frame.Navigate(typeof(Uri;
-            }
+            _PassedObject = objectToBePassed;
+            frame.Navigate(page);   
         }
     }
 }
