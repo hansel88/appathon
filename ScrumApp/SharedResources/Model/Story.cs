@@ -7,7 +7,7 @@ using SharedResources.Utilities;
 
 namespace SharedResources.Model
 {
-    class Story : ModelBase
+    public class Story : ModelBase
     {
         private string _title;
         public string Title
@@ -118,6 +118,34 @@ namespace SharedResources.Model
             {
                 _state = value;
                 onPropertyChanged("State");
+            }
+        }
+
+        private List<StoryStateChange> _stateChanges;
+        public List<StoryStateChange> StateChanges
+        {
+            get
+            {
+                return _stateChanges;
+            }
+            set
+            {
+                _stateChanges = value;
+                onPropertyChanged("StateChanges");
+            }
+        }
+
+        private List<Comment> _comments;
+        public List<Comment> Comments
+        {
+            get
+            {
+                return _comments;
+            }
+            set
+            {
+                _comments = value;
+                onPropertyChanged("Comments");
             }
         }
     }
