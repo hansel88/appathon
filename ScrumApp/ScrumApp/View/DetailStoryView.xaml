@@ -13,17 +13,17 @@
         <TextBlock FontSize="25" Foreground="White" Text="{Binding UserStory.CreatedString}" Margin="0, 200" HorizontalAlignment="Center"/>
 
         <StackPanel Orientation="Horizontal" Margin="0,300" HorizontalAlignment="Center">
-            <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical"> 
                 <TextBlock Foreground="Orange" FontSize="35" Text="Description:"/>
                  <TextBlock x:Name="DescriptionBox" Foreground="White" FontSize="30" Text="{Binding UserStory.Description}" Height="500" Width="500" TextWrapping="Wrap" />
             </StackPanel>
             <StackPanel Orientation="Vertical">
                     <TextBlock Foreground="Orange" FontSize="35" Text="Comments:"/>
-                    <ListBox x:Name="CommentList" IsHitTestVisible="False" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="Transparent" HorizontalAlignment="Right" Width="400" Height="500" ItemsSource="{Binding UserStory.Comments}">
+                    <ListBox x:Name="CommentList" IsHitTestVisible="False" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="Transparent" Width="400" Height="500" ItemsSource="{Binding UserStory.Comments}">
                     <ListBox.ItemTemplate> 
                         <DataTemplate>
                             <ListBoxItem>
-                                <StackPanel Margin="0,0,0,10">
+                                <StackPanel Margin="-18,0,0,10">
                                     <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Author.RealName}" />
                                     <TextBlock FontSize="25" TextWrapping="Wrap" Foreground="White" Text="{Binding Text}" />
                                 </StackPanel>
