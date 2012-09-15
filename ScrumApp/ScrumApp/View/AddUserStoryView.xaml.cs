@@ -5,6 +5,7 @@ using System.Linq;
 using ScrumApp.ViewModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Notifications;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -57,8 +58,20 @@ namespace ScrumApp.View
 
         private void SaveUserStory_Click(object sender, RoutedEventArgs e)
         {
-
             vm.SaveUserStory();
+
+            var button = sender as Button;
+            if (button.Content.Equals("Save and exit"))
+            {
+                this.Frame.GoBack();
+            }
+            else if (button.Content.Equals("Save and add another"))
+            {
+                txtDescription.Text = "";
+                txtTitle.Text = "";
+                sliPriority.Value = 500;
+
+            }
         }
     }
 }

@@ -114,6 +114,7 @@
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="ViewModel\AddUserStoryViewModel.cs" />
     <Compile Include="ViewModel\DetailStoryViewModel.cs" />
+    <Compile Include="ViewModel\SprintViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\AddUserStoryView.xaml.cs">
       <DependentUpon>AddUserStoryView.xaml</DependentUpon>
@@ -125,6 +126,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\SprintView.xaml.cs">
+      <DependentUpon>SprintView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -162,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SprintView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

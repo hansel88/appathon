@@ -47,5 +47,10 @@ namespace ScrumApp
             this.Frame.Navigate(typeof(SprintView));
         }
 
+        private void SprintViewTestButton_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AddUserStoryView));
+        }
+
     }
 }

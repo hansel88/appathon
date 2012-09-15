@@ -55,8 +55,11 @@
             <TextBlock Text="Description" Grid.Row="2" Style="{StaticResource SubheaderTextStyle}" />
             <TextBox x:Name="txtDescription" Style="{StaticResource MultilineTextBox}" Grid.Row="2" Grid.Column="1" />
             <TextBlock Text="Priority" Grid.Row="3" Style="{StaticResource SubheaderTextStyle}" />
-            <Slider x:Name="sliPriority" Minimum="1" Maximum="1000" StepFrequency="1" />
-            <Button Content="Save user story" Click="SaveUserStory_Click" Grid.Row="4" Style="{StaticResource SubheaderTextStyle}" />
+            <Slider x:Name="sliPriority" Minimum="1" Maximum="1000" StepFrequency="1" Grid.Row="3" Grid.Column="1" Value="500" />
+            <StackPanel Orientation="Horizontal"  Grid.Row="4" Grid.Column="1">
+                <Button Content="Save and exit" Click="SaveUserStory_Click" />
+                <Button Content="Save and add another" Click="SaveUserStory_Click" />
+            </StackPanel>
         </Grid>
 
         <VisualStateManager.VisualStateGroups>
