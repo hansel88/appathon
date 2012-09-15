@@ -100,9 +100,9 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Folder Include="Controller\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\StorageController.cs" />
     <Compile Include="Model\Comment.cs" />
     <Compile Include="Model\ModelBase.cs" />
     <Compile Include="Model\Project.cs" />
@@ -111,6 +111,7 @@
     <Compile Include="Model\StoryStateChange.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\DataStructure.cs" />
     <Compile Include="Utilities\DateUtility.cs" />
     <Compile Include="Utilities\Enums.cs" />
     <Compile Include="Utilities\NavigationUtility.cs" />

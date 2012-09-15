@@ -71,6 +71,7 @@ namespace ScrumApp.View
                 txtTitle.Text = "";
                 sliPriority.Value = 500;
 
+                // TODO: Add toast
             }
         }
     }

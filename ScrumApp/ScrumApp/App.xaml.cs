@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using SharedResources.Controller;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -51,7 +52,8 @@ namespace ScrumApp
 
             if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
             {
-                //TODO: Load state from previously suspended application
+                StorageController.InitHandlers();
+                StorageController.LoadData();
             }
 
             // Create a Frame to act navigation context and navigate to the first page

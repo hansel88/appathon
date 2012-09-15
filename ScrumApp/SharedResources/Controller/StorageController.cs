@@ -34,13 +34,13 @@ namespace SharedResources.Controller
             roamingSettings.Values["Projects"] = DataStructure.Projects;
         }
 
-        public void InitHandlers()
+        public static void InitHandlers()
         {
             ApplicationData.Current.DataChanged +=
                new TypedEventHandler<ApplicationData, object>(DataChangeHandler);
         }
 
-        private void DataChangeHandler(ApplicationData data, object o)
+        private static void DataChangeHandler(ApplicationData data, object o)
         { 
             // Refresh data here!
             LoadData();
