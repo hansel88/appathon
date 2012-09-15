@@ -10,12 +10,12 @@ namespace ScrumApp.ViewModel
 {
     class AddUserStoryViewModel
     {
-        public void SaveUserStory(string title, string description, int priority)
+        public void SaveUserStory(string title, string description, double priority)
         {
             var story = new Story();
             story.Title = title;
             story.Description = description;
-            story.Priority = priority;
+            story.Priority = (int) priority;
             story.Author = DataStructure.CurrentUser;
             story.CreatedDate = DateTime.Now;
             story.State = StoryStates.Unassigned;

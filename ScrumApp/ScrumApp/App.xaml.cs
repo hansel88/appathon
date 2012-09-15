@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using ScrumApp.Common;
+using ScrumApp.Controls;
 using SharedResources.Controller;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ApplicationSettings;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -56,6 +59,9 @@ namespace ScrumApp
                 StorageController.LoadData();
             }
 
+            // Register settings pane
+            SettingsPane.GetForCurrentView().CommandsRequested += App_CommandRequested;
+
             // Create a Frame to act navigation context and navigate to the first page
             var rootFrame = new Frame();
             if (!rootFrame.Navigate(typeof(MainPage)))
@@ -80,6 +86,30 @@ namespace ScrumApp
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+        void App_CommandRequested(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs e)
+        { 
+            // Add an about command
+            var about = new SettingsCommand("about", "About", (handler) =>
+                {
+                    var settings = new SettingsFlyout();
+                    settings.ShowFlyout(new AboutUserControl());
+                });
+            var preferences = new SettingsCommand("preferences", "Preferences", (handler) =>
+                {
+                    var settings = new SettingsFlyout();
+                    settings.ShowFlyout(new PreferencesUserControl());
+                });
+            var privacyPolicy = new SettingsCommand("privacyPolicy", "Privacy Policy", (handler) =>
+                {
+                    var settings = new SettingsFlyout();
+                    settings.ShowFlyout(new PrivacyPolicyUserControl());
+                });
+
+            e.Request.ApplicationCommands.Add(about);
+            e.Request.ApplicationCommands.Add(preferences);
+            e.Request.ApplicationCommands.Add(privacyPolicy);
         }
     }
 }

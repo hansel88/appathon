@@ -39,9 +39,10 @@
         </Grid>
         <Grid Grid.Row="1" Margin="20,0,0,0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="3*" />
-                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="299*" />
+                <ColumnDefinition Width="458*" />
+                <ColumnDefinition Width="140*"/>
+                <ColumnDefinition Width="449*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
@@ -50,13 +51,18 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
+            
             <TextBlock Text="Title" Grid.Row="1" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtTitle" Style="{StaticResource BasicTextBox}" Grid.Row="1" Grid.Column="1" />
+            <TextBox x:Name="txtTitle" Style="{StaticResource BasicTextBox}" Grid.Row="1" Grid.Column="1" GotFocus="txtTitle_GotFocus" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="errTitle" Text="You must at least enter a title for the user story." Style="{StaticResource ErrorTextStyle}" />
+            
             <TextBlock Text="Description" Grid.Row="2" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtDescription" Style="{StaticResource MultilineTextBox}" Grid.Row="2" Grid.Column="1" />
+            <TextBox x:Name="txtDescription" Style="{StaticResource MultilineTextBox}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" />
+            
             <TextBlock Text="Priority" Grid.Row="3" Style="{StaticResource SubheaderTextStyle}" />
-            <Slider x:Name="sliPriority" Minimum="1" Maximum="1000" StepFrequency="1" Grid.Row="3" Grid.Column="1" Value="500" />
-            <StackPanel Orientation="Horizontal"  Grid.Row="4" Grid.Column="1">
+            <Slider x:Name="sliPriority" Minimum="1" Maximum="1000" StepFrequency="1" Grid.Row="3" Grid.Column="1" Value="500" Grid.ColumnSpan="2" />
+            
+            <StackPanel Orientation="Horizontal"  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2">
                 <Button Content="Save and exit" Click="SaveUserStory_Click" />
                 <Button Content="Save and add another" Click="SaveUserStory_Click" />
             </StackPanel>

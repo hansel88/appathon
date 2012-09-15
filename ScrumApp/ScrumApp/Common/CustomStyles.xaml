@@ -20,4 +20,21 @@
         <Setter Property="TextWrapping" Value="Wrap" />
     </Style>
     
+    <!-- Text blocks -->
+    <Style x:Key="ErrorTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="Red" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Margin" Value="10,0,0,0" />
+        <Setter Property="Visibility" Value="Collapsed" />
+    </Style>
+    
+    <!-- Flyouts -->
+    <Style x:Key="BasicFlyoutStyle" TargetType="StackPanel">
+        <Setter Property="Margin" Value="20,10,10,10" />
+    </Style>
+    
+    <Style x:Key="BasicFlyoutWrapperStyle" TargetType="Grid">
+        <Setter Property="Background" Value="Red" />
+    </Style>
+    
 </ResourceDictionary>

@@ -6,6 +6,7 @@ using ScrumApp.ViewModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Notifications;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -29,9 +30,41 @@ namespace ScrumApp.View
 
             vm = new AddUserStoryViewModel();
             this.DataContext = vm;
+
+            this.Loaded += AddUserStoryView_Loaded;
+        }
+
+        void AddUserStoryView_Loaded(object sender, RoutedEventArgs e)
+        {
+            var control = sender as Control;
+            if (control == null) return;
+
+            // Setting the initial state of the application
+            VisualStateManager.GoToState(control, ApplicationView.Value.ToString(), false);
+            if (this.layoutAwareControls == null)
+            {
+                layoutAwareControls = new List<Control>();
+            }
+            this.layoutAwareControls.Add(control);
+
+            Window.Current.SizeChanged += Current_SizeChanged;
+        }
+
+        void Current_SizeChanged(object sender, Windows.UI.Core.WindowSizeChangedEventArgs e)
+        {
+            string visualState = ApplicationView.Value.ToString();
+
+            if (this.layoutAwareControls != null)
+            {
+                foreach (var layoutAwareControl in this.layoutAwareControls)
+                {
+                    VisualStateManager.GoToState(layoutAwareControl, visualState, false);
+                }
+            }
         }
 
         private AddUserStoryViewModel vm;
+        private List<Control> layoutAwareControls;
 
         /// <summary>
         /// Populates the page with content passed during navigation.  Any saved state is also
@@ -58,7 +91,15 @@ namespace ScrumApp.View
 
         private void SaveUserStory_Click(object sender, RoutedEventArgs e)
         {
-            vm.SaveUserStory();
+            // Validate input
+            // Rules - only title is required.
+            if (txtTitle.Text.Length == 0)
+            {
+                errTitle.Visibility = Visibility.Visible;
+                return;
+            }
+
+            vm.SaveUserStory(txtTitle.Text, txtDescription.Text, sliPriority.Value);
 
             var button = sender as Button;
             if (button.Content.Equals("Save and exit"))
@@ -74,5 +115,11 @@ namespace ScrumApp.View
                 // TODO: Add toast
             }
         }
+
+        private void txtTitle_GotFocus(object sender, RoutedEventArgs e)
+        {
+            errTitle.Visibility = Visibility.Collapsed;
+        }
+
     }
 }
