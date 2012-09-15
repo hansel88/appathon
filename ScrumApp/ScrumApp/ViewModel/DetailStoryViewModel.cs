@@ -54,6 +54,7 @@ namespace ScrumApp.ViewModel
 
             UserStory.Comments.Add(c1);
             UserStory.Comments.Add(c2);
+            UserStory.Assignee = tempUser;
         }
 
     }
