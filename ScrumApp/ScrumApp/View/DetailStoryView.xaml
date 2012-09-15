@@ -42,7 +42,7 @@
                 <TextBlock x:Name="TitleBox" FontSize="70" Foreground="Orange" Text="{Binding UserStory.Title}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,100"/>
                 <TextBlock FontSize="25" Foreground="White" Text="{Binding UserStory.CreatedString}" Margin="0, 200" HorizontalAlignment="Center"/>
 
-                <StackPanel Orientation="Horizontal" Margin="0,300" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Foreground="Orange" FontSize="35" Text="Description:"/>
                         <TextBlock x:Name="DescriptionBox" Foreground="White" FontSize="30" Text="{Binding UserStory.Description}" Height="500" Width="500" TextWrapping="Wrap" />
