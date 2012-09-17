@@ -10,6 +10,7 @@ namespace SharedResources.Utilities
     public static class DataStructure
     {
         public static List<Project> Projects { get; set; }
+        public static List<User> Users { get; set; }
         public static User CurrentUser { get; set; }
         public static Project CurrentProject { get; set; }
 
