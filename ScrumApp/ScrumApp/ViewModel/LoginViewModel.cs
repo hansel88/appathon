@@ -7,7 +7,7 @@ using SharedResources.Controller;
 
 namespace ScrumApp.ViewModel
 {
-    class LoginViewModel
+    class LoginViewModel : ViewModelBase
     {
         private UserController ctrl;
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SharedResources.Utilities;
 
 namespace SharedResources.Model
 {
@@ -80,6 +81,21 @@ namespace SharedResources.Model
                 onPropertyChanged("PhoneNumber");
             }
         }
+
+        private PermissionLevel _accessLevel;
+        public PermissionLevel AccessLevel
+        {
+            get
+            {
+                return _accessLevel;
+            }
+            set
+            {
+                _accessLevel = value;
+                onPropertyChanged("AccessLevel");
+            }
+        }
+
 
         #endregion
 

@@ -28,6 +28,17 @@ namespace ScrumApp.View
         {
             this.InitializeComponent();
             vm = new LoginViewModel();
+
+            this.Loaded += LoginView_Loaded;
+            
+        }
+
+        void LoginView_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (!vm.CanUserAccess())
+            {
+                this.Frame.Navigate(typeof(MainPage));
+            }
         }
 
         private LoginViewModel vm;

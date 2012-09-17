@@ -9,10 +9,15 @@ namespace SharedResources.Utilities
 {
     public static class DataStructure
     {
+        #region Data Structures
+
         public static List<Project> Projects { get; set; }
         public static List<User> Users { get; set; }
-        public static User CurrentUser { get; set; }
+
         public static Project CurrentProject { get; set; }
+        public static User CurrentUser { get; set; }
+
+        #endregion
 
         // Methods that deals with finding and / or editing these projects
     }

@@ -10,4 +10,9 @@ namespace SharedResources.Utilities
     {
         Unassigned, Open, InAnalysis, InProgress, Testing, Closed
     }
+
+    public enum PermissionLevel
+    { 
+        Open = 1, UserOnly = 2, AdminOnly = 3
+    }
 }

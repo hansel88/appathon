@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using SharedResources.Utilities;
 
 namespace ScrumApp.ViewModel
 {
@@ -57,5 +58,19 @@ namespace ScrumApp.ViewModel
             }
         }
 
+        public PermissionLevel AccessLevel = PermissionLevel.Open;
+
+        public bool CanUserAccess()
+        {
+            if (AccessLevel != PermissionLevel.Open)
+            {
+                if (DataStructure.CurrentUser != null)
+                {
+                    return AccessLevel <= DataStructure.CurrentUser.AccessLevel;
+                }
+                return false;
+            }
+            return true;
+        }
     }
 }
