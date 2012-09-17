@@ -47,18 +47,22 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
+                <RowDefinition Height="50" />
             </Grid.RowDefinitions>
             
             <!-- Username -->
             <TextBlock Text="Username" Style="{StaticResource SubheaderTextStyle}" Grid.Column="0" Grid.Row="0" />
-            <TextBox x:Name="txtUsername" Style="{StaticResource BasicTextBox}" Grid.Column="1" Grid.Row="0" />
+            <TextBox x:Name="txtUsername" Style="{StaticResource BasicTextBox}" Grid.Column="1" Grid.Row="0" GotFocus="fieldGotFocus"/>
             
             <!-- Password -->
             <TextBlock Text="Password" Style="{StaticResource SubheaderTextStyle}" Grid.Column="0" Grid.Row="1" />
-            <PasswordBox x:Name="txtPassword" Style="{StaticResource BasicPasswordBox}" Grid.Column="1" Grid.Row="1" />
+            <PasswordBox x:Name="txtPassword" Style="{StaticResource BasicPasswordBox}" Grid.Column="1" Grid.Row="1" GotFocus="fieldGotFocus" />
             
             <!-- Login button -->
             <Button x:Name="btnLogin" Grid.Column="1" Grid.Row="2" Content="Log in" Click="OnLoginClick" />
+            
+            <!-- Error text field -->
+            <TextBlock x:Name="errFeedback" Style="{StaticResource ErrorTextStyle}" Margin="0,10,0,0" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
             
         </Grid>
 

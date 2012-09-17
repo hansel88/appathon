@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\StorageController.cs" />
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\Comment.cs" />
     <Compile Include="Model\ModelBase.cs" />
     <Compile Include="Model\Project.cs" />

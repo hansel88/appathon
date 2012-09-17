@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="ViewModel\AddUserStoryViewModel.cs" />
     <Compile Include="ViewModel\DetailStoryViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\SprintViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\AddUserStoryView.xaml.cs">

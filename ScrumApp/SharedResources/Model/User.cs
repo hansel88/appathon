@@ -8,6 +8,9 @@ namespace SharedResources.Model
 {
     public class User : ModelBase
     {
+
+        #region Properties
+
         private string _userName;
         public string UserName
         {
@@ -77,5 +80,24 @@ namespace SharedResources.Model
                 onPropertyChanged("PhoneNumber");
             }
         }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Checks whether the user object is properly filled out or not
+        /// </summary>
+        /// <returns></returns>
+        public bool IsValid()
+        {
+            return (this.Email != null && this.Email.Length > 0 &&
+                    this.Password != null && this.Password.Length > 0 &&
+                    this.PhoneNumber != null && this.PhoneNumber.Length > 4 &&
+                    this.RealName != null && this.RealName.Length > 0 &&
+                    this.UserName != null && this.UserName.Length > 0);
+        }
+
+        #endregion
     }
 }

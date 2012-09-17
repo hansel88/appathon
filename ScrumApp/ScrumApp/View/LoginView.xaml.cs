@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using ScrumApp.ViewModel;
+using SharedResources.Controller;
+using SharedResources.Utilities;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -24,7 +27,10 @@ namespace ScrumApp.View
         public LoginView()
         {
             this.InitializeComponent();
+            vm = new LoginViewModel();
         }
+
+        private LoginViewModel vm;
 
         /// <summary>
         /// Populates the page with content passed during navigation.  Any saved state is also
@@ -47,6 +53,41 @@ namespace ScrumApp.View
         /// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
+        }
+
+        private void OnLoginClick(object sender, RoutedEventArgs e)
+        {
+            // Check for validity
+            if (isLoginFieldsValid())
+            {
+                if (vm.Login(txtUsername.Text, txtPassword.Password))
+                {
+                    NavigationUtility.NavigateTo(typeof(MainPage), null, this.Frame);
+                }
+                else
+                {
+                    errFeedback.Text = App.Current.Resources["errInvalidLogin"] as String;
+                    errFeedback.Visibility = Visibility.Visible;
+                }
+            }
+            else
+            {
+                errFeedback.Text = App.Current.Resources["errRequiredFieldsEmpty"] as String;
+                errFeedback.Visibility = Visibility.Visible;
+            }
+
+        }
+
+        private bool isLoginFieldsValid()
+        {
+            return (!String.IsNullOrWhiteSpace(txtUsername.Text) &&
+                    !String.IsNullOrWhiteSpace(txtPassword.Password));
+        }
+
+        private void fieldGotFocus(object sender, RoutedEventArgs e)
+        {
+            errFeedback.Text = String.Empty;
+            errFeedback.Visibility = Visibility.Collapsed;
         }
     }
 }

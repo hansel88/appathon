@@ -4,4 +4,7 @@
     xmlns:local="using:ScrumApp.Common">
     
     <x:String x:Key="AppName">Scrummy</x:String>
+    <x:String x:Key="errRequiredFieldsEmpty">Some information is missing.</x:String>
+    <x:String x:Key="errInvalidLogin">The username or password was not recognized.</x:String>
+    
 </ResourceDictionary>
