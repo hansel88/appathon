@@ -97,6 +97,12 @@ namespace ScrumApp.ViewModel
 
         public SprintViewModel()
         {
+            Open = new List<Story>();
+            InAnalysis = new List<Story>();
+            InProgress = new List<Story>();
+            Testing = new List<Story>();
+            Closed = new List<Story>();
+
             if (NavigationUtility.PassedObject != null && NavigationUtility.PassedObject is Sprint)
             {
                 CurrentSprint = NavigationUtility.PassedObject as Sprint;
@@ -120,7 +126,62 @@ namespace ScrumApp.ViewModel
                     }
                 }
             }
+            //// TEMPORARY DATA
+            Story UserStory = new Story();
+            UserStory.Description = "Random description. blablablablablablabla. blablalbllalblalbal";
+            UserStory.Title = "Story number 1";
 
+            User tempUser = new User();
+            tempUser.UserName = "random username";
+            tempUser.RealName = "Hans Petter Naumann";
+            UserStory.Author = tempUser;
+            UserStory.CreatedDate = DateTime.Now;
+            UserStory.Priority = 500;
+
+            Comment c1 = new Comment();
+            c1.Author = tempUser;
+            c1.Text = "random comment. blabla";
+            c1.TimeStamp = DateTime.Now;
+
+            Comment c2 = new Comment();
+            c2.Author = tempUser;
+            c2.Text = "random comment number 2. blabla";
+            c2.TimeStamp = DateTime.Now;
+
+            UserStory.Comments.Add(c1);
+            UserStory.Comments.Add(c2);
+            UserStory.Assignee = tempUser;
+
+            UserStory.State = StoryStates.InAnalysis;
+            InAnalysis.Add(UserStory);
+            ///////////////////
+            Story UserStory2 = new Story();
+            UserStory2.Description = "Random description. blablablablablablabla. blablalbllalblalbal";
+            UserStory2.Title = "Story number 2";
+
+            User tempUser2 = new User();
+            tempUser2.UserName = "random username";
+            tempUser2.RealName = "Kris Selbekk";
+            UserStory2.Author = tempUser;
+            UserStory2.CreatedDate = DateTime.Now;
+            UserStory.Priority = 900;
+
+            Comment c12 = new Comment();
+            c12.Author = tempUser;
+            c12.Text = "random comment. blabla";
+            c12.TimeStamp = DateTime.Now;
+
+            Comment c22 = new Comment();
+            c22.Author = tempUser;
+            c22.Text = "random comment number 2. blabla";
+            c22.TimeStamp = DateTime.Now;
+
+            UserStory2.Comments.Add(c1);
+            UserStory2.Comments.Add(c2);
+            UserStory2.Assignee = tempUser;
+
+            UserStory2.State = StoryStates.InProgress;
+            InProgress.Add(UserStory2);
         }
     }
 }

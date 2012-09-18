@@ -42,8 +42,13 @@
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <ListBoxItem>
-                                <StackPanel Margin="0,0,0,10">
+                                <StackPanel Margin="0,0,0,10" Orientation="Vertical">
                                     <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}" />
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock FontSize="20" Foreground="Orange" Text="Assignee: " />
+                                        <TextBlock FontSize="20" Foreground="Orange" Text="{Binding Author.RealName}" />
+                                    </StackPanel>
+                                    <TextBlock FontSize="20" Foreground="Orange" Text="{Binding Description}" />
                                 </StackPanel>
                             </ListBoxItem>
                         </DataTemplate>
