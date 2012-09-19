@@ -1,6 +1,26 @@
-# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
-bin
-obj
+*.iml
+*.ipr
+*.iws
+target/
+logs/
+*.log*
+*.classpath
+*.tmp*
+.*.swp
+.idea
+.DS_Store
 
-# mstest test results
-TestResults
+*.suo
+*.xap
+*.exe
+*.exp
+*.ilk
+*.lib
+*.ncb
+*.log
+*.pdb
+*.vcproj.*.user
+*.csproj.user
+*.cache
+[Rr]elease
+[Oo]bj
