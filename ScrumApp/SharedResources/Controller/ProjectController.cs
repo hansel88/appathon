@@ -23,7 +23,7 @@ namespace SharedResources.Controller
             if (project == null)
                 throw new ArgumentNullException("No project was given to register");
 
-            if (DataStructure.Projects.Where(p => p.Name == project.Name).First() != null)
+            if (DataStructure.Projects.Where(p => p.Name == project.Name).Count() > 0)
                 throw new ArgumentException("A project with the same name was found.");
 
             // TODO: Add owner?

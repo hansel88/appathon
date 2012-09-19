@@ -73,14 +73,27 @@ namespace ScrumApp.View
             project.StartDate = dtpStartButton.Value ?? DateTime.Now;
             project.EndDate = dtpEndButton.Value ?? DateTime.Now;
 
-            project = vm.SaveProject(project);
-            if (project != null)
+            try
             {
-                this.Frame.Navigate(typeof(ProjectView), project);
+                project = vm.SaveProject(project);
+                if (project != null)
+                {
+                    this.Frame.Navigate(typeof(ProjectView), project);
+                }
+                else
+                {
+                    errText.Text = App.Current.Resources["errGeneralError"] as String;
+                    errText.Visibility = Visibility.Visible;
+                }
             }
-            else
+            catch (ArgumentNullException ex)
             {
-                errText.Text = App.Current.Resources["errGeneralError"] as String;
+                errText.Text = ex.Message;
+                errText.Visibility = Visibility.Visible;
+            }
+            catch (ArgumentException ex)
+            {
+                errText.Text = "The project with that name is already registered. Please change the name of this one or delete the existing.";
                 errText.Visibility = Visibility.Visible;
             }
         }

@@ -22,7 +22,7 @@ namespace SharedResources.Controller
             ApplicationDataContainer roamingSettings = ApplicationData.Current.RoamingSettings;
 
             // Saving the settings temporarily in the app
-            DataStructure.Projects = roamingSettings.Values["Projects"] as List<Project>;
+            DataStructure.Projects = roamingSettings.Values["Projects"] as List<Project> ?? new List<Project>();
         }
 
         public static void SaveData()

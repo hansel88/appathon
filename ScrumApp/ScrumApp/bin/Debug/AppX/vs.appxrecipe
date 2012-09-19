@@ -5,7 +5,7 @@
     <WindowsUser>selbekk</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>3F35668D7A9CFDD7E397C912A25E848A49C69D2FC9ECE8407AF91D1BE8605D1C</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>9765145E73167B8FA998B828EFEA8904F72A289A3A7E2092E7641D16501FB750</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>21dc6ef0-444a-4e78-bd22-93af0ebda50d_1.0.0.0_neutral__65pfbmxavzvhp</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>21dc6ef0-444a-4e78-bd22-93af0ebda50d_65pfbmxavzvhp!App</RegisteredUserModeAppID>
     <RegisteredPackageID>21dc6ef0-444a-4e78-bd22-93af0ebda50d</RegisteredPackageID>
@@ -16,21 +16,21 @@
     <AppXManifest Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-09-19T21:10:53.837</Modified>
+      <Modified>2012-09-19T21:29:54.389</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.exe">
       <PackagePath>ScrumApp.exe</PackagePath>
-      <Modified>2012-09-19T21:10:53.615</Modified>
+      <Modified>2012-09-19T21:40:05.298</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.pdb">
       <PackagePath>ScrumApp.pdb</PackagePath>
-      <Modified>2012-09-19T21:10:53.596</Modified>
+      <Modified>2012-09-19T21:40:05.280</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.pdb">
       <PackagePath>SharedResources.pdb</PackagePath>
-      <Modified>2012-09-19T21:10:01.116</Modified>
+      <Modified>2012-09-19T21:40:04.172</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.Core.dll">
       <PackagePath>Telerik.Core.dll</PackagePath>
@@ -54,7 +54,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.dll">
       <PackagePath>SharedResources.dll</PackagePath>
-      <Modified>2012-09-19T21:10:01.135</Modified>
+      <Modified>2012-09-19T21:40:04.190</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.Core.xml">
       <PackagePath>Telerik.Core.xml</PackagePath>

@@ -55,9 +55,11 @@ namespace ScrumApp
 
             if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
             {
-                StorageController.InitHandlers();
-                StorageController.LoadData();
+                
             }
+
+            StorageController.InitHandlers();
+            StorageController.LoadData();
 
             // Register settings pane
             SettingsPane.GetForCurrentView().CommandsRequested += App_CommandRequested;

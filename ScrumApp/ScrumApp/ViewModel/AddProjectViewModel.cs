@@ -24,13 +24,7 @@ namespace ScrumApp.ViewModel
         /// <returns>The complete project</returns>
         public Project SaveProject(Project project)
         {
-            if (project == null)
-                return null;
-
-
-            
-
-            return project;
+            return ctrl.SaveProject(project);
         }
     }
 }
