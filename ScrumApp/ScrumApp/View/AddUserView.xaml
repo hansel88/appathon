@@ -63,8 +63,7 @@
             <TextBox x:Name="txtDescription" Style="{StaticResource BasicTextBox}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" />
 
              <TextBlock Text="Desired password" Grid.Row="3" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtPassword" Style="{StaticResource BasicTextBox}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" />
-            <CheckBox Content="Show password" Grid.Row="3" Grid.Column="3"  Margin="10,0,0,20"/>
+            <PasswordBox x:Name="txtPassword" IsPasswordRevealButtonEnabled="True" Style="{StaticResource BasicPasswordBox}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" />
     
             <TextBlock Text="Email" Grid.Row="4" Style="{StaticResource SubheaderTextStyle}" />
             <TextBox x:Name="txtEmail" Style="{StaticResource BasicTextBox}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" />
@@ -72,8 +71,13 @@
             <TextBlock Text="Phone" Grid.Row="5" Style="{StaticResource SubheaderTextStyle}" />
             <TextBox x:Name="txtPhone" Style="{StaticResource BasicTextBox}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" />
     
-    
-    
+            <TextBlock Text="Permission level" Grid.Row="6" Style="{StaticResource SubheaderTextStyle}" />
+                <ComboBox  Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2">
+                    <x:String>User</x:String>
+                    <x:String>Administrator</x:String>
+                    <x:String>Open</x:String>
+                </ComboBox>
+        
             <StackPanel Orientation="Horizontal"  Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">
                 <Button x:Name="SaveAndExitBtn" Content="Save and exit" Click="SaveAndExitBtn_Click_1"/>
                 <Button x:Name="SaveAndAddAnotherBtn" Content="Save and add another" Click="SaveAndAddAnotherBtn_Click_1"/>

@@ -22,19 +22,19 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.exe">
       <PackagePath>ScrumApp.exe</PackagePath>
-      <Modified>2012-09-19T18:33:06.737</Modified>
+      <Modified>2012-09-19T18:58:27.084</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.pdb">
       <PackagePath>ScrumApp.pdb</PackagePath>
-      <Modified>2012-09-19T18:33:06.728</Modified>
+      <Modified>2012-09-19T18:58:27.075</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.pdb">
       <PackagePath>SharedResources.pdb</PackagePath>
-      <Modified>2012-09-18T23:31:57.830</Modified>
+      <Modified>2012-09-19T18:46:10.426</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.dll">
       <PackagePath>SharedResources.dll</PackagePath>
-      <Modified>2012-09-18T23:31:57.854</Modified>
+      <Modified>2012-09-19T18:46:10.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.Core.dll">
       <PackagePath>Telerik.Core.dll</PackagePath>
@@ -122,7 +122,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddUserView.xaml">
       <PackagePath>View\AddUserView.xaml</PackagePath>
-      <Modified>2012-09-19T18:29:49.309</Modified>
+      <Modified>2012-09-19T18:58:24.651</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\DetailStoryView.xaml">
       <PackagePath>View\DetailStoryView.xaml</PackagePath>
