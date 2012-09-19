@@ -34,7 +34,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Button x:ConnectionId='3' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
 <Grid Grid.Row="1" Margin="20,0,0,0">
@@ -75,8 +75,8 @@
     
     
             <StackPanel Orientation="Horizontal"  Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">
-                <Button x:Name="SaveAndExitBtn" Content="Save and exit" Click="SaveAndExitBtn_Click_1"/>
-                <Button x:Name="SaveAndAddAnotherBtn" Content="Save and add another" Click="SaveAndAddAnotherBtn_Click_1"/>
+                <Button x:ConnectionId='1' x:Name="SaveAndExitBtn" Content="Save and exit"                               />
+                <Button x:ConnectionId='2' x:Name="SaveAndAddAnotherBtn" Content="Save and add another"                                     />
             </StackPanel>
         </Grid>
 
@@ -112,3 +112,4 @@
         </VisualStateManager.VisualStateGroups>
     </Grid>
 </common:LayoutAwarePage>
+

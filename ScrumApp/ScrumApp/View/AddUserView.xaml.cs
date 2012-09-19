@@ -48,5 +48,15 @@ namespace ScrumApp.View
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
         }
+
+        private void SaveAndAddAnotherBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SaveAndExitBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

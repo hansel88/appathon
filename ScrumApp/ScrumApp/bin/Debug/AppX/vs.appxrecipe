@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-09-18T23:32:00.888</Modified>
+      <Modified>2012-09-19T18:26:39.502</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.exe">
       <PackagePath>ScrumApp.exe</PackagePath>
-      <Modified>2012-09-19T17:14:15.140</Modified>
+      <Modified>2012-09-19T18:33:06.737</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.pdb">
       <PackagePath>ScrumApp.pdb</PackagePath>
-      <Modified>2012-09-19T17:14:15.130</Modified>
+      <Modified>2012-09-19T18:33:06.728</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.pdb">
       <PackagePath>SharedResources.pdb</PackagePath>
@@ -35,6 +35,30 @@
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.dll">
       <PackagePath>SharedResources.dll</PackagePath>
       <Modified>2012-09-18T23:31:57.854</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.Core.dll">
+      <PackagePath>Telerik.Core.dll</PackagePath>
+      <Modified>2012-09-19T13:52:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.UI.Xaml.Input.dll">
+      <PackagePath>Telerik.UI.Xaml.Input.dll</PackagePath>
+      <Modified>2012-09-19T13:53:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.UI.Xaml.Primitives.dll">
+      <PackagePath>Telerik.UI.Xaml.Primitives.dll</PackagePath>
+      <Modified>2012-09-19T13:52:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.Core.pdb">
+      <PackagePath>Telerik.Core.pdb</PackagePath>
+      <Modified>2012-09-19T13:52:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.UI.Xaml.Input.pdb">
+      <PackagePath>Telerik.UI.Xaml.Input.pdb</PackagePath>
+      <Modified>2012-09-19T13:53:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.UI.Xaml.Primitives.pdb">
+      <PackagePath>Telerik.UI.Xaml.Primitives.pdb</PackagePath>
+      <Modified>2012-09-19T13:52:42.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -88,9 +112,17 @@
       <PackagePath>Controls\PrivacyPolicyUserControl.xaml</PackagePath>
       <Modified>2012-09-17T13:27:19.198</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddProjectView.xaml">
+      <PackagePath>View\AddProjectView.xaml</PackagePath>
+      <Modified>2012-09-19T18:10:39.272</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddUserStoryView.xaml">
       <PackagePath>View\AddUserStoryView.xaml</PackagePath>
       <Modified>2012-09-17T13:27:19.204</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddUserView.xaml">
+      <PackagePath>View\AddUserView.xaml</PackagePath>
+      <Modified>2012-09-19T18:29:49.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\DetailStoryView.xaml">
       <PackagePath>View\DetailStoryView.xaml</PackagePath>
@@ -102,7 +134,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\MainPage.xaml">
       <PackagePath>View\MainPage.xaml</PackagePath>
-      <Modified>2012-09-18T23:31:12.591</Modified>
+      <Modified>2012-09-19T18:33:04.578</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\SprintView.xaml">
       <PackagePath>View\SprintView.xaml</PackagePath>
@@ -114,7 +146,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-09-18T23:32:00.724</Modified>
+      <Modified>2012-09-19T18:26:39.376</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -25,6 +25,24 @@
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.dll">
       <PackagePath>SharedResources.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.Core.dll">
+      <PackagePath>Telerik.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.UI.Xaml.Input.dll">
+      <PackagePath>Telerik.UI.Xaml.Input.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.UI.Xaml.Primitives.dll">
+      <PackagePath>Telerik.UI.Xaml.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.Core.pdb">
+      <PackagePath>Telerik.Core.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.UI.Xaml.Input.pdb">
+      <PackagePath>Telerik.UI.Xaml.Input.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.UI.Xaml.Primitives.pdb">
+      <PackagePath>Telerik.UI.Xaml.Primitives.pdb</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -65,8 +83,14 @@
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Controls\PrivacyPolicyUserControl.xaml">
       <PackagePath>Controls\PrivacyPolicyUserControl.xaml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddProjectView.xaml">
+      <PackagePath>View\AddProjectView.xaml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddUserStoryView.xaml">
       <PackagePath>View\AddUserStoryView.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddUserView.xaml">
+      <PackagePath>View\AddUserView.xaml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\DetailStoryView.xaml">
       <PackagePath>View\DetailStoryView.xaml</PackagePath>

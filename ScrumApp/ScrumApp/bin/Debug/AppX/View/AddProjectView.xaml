@@ -1,6 +1,6 @@
 ﻿<common:LayoutAwarePage
     x:Name="pageRoot"
-    x:Class="ScrumApp.View.AddUserView"
+    x:Class="ScrumApp.View.AddProjectView"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
     IsTabStop="false"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -12,9 +12,7 @@
     mc:Ignorable="d">
 
     <Page.Resources>
-
-        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">Add user</x:String>
+        
     </Page.Resources>
 
     <!--
@@ -34,16 +32,12 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
+            <Button x:ConnectionId='4' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Add new project" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
-<Grid Grid.Row="1" Margin="20,0,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="299*" />
-                <ColumnDefinition Width="458*" />
-                <ColumnDefinition Width="140*"/>
-                <ColumnDefinition Width="449*" />
-            </Grid.ColumnDefinitions>
+
+        <!-- Main Content -->
+        <Grid Grid.Row="1" Margin="20,0,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
@@ -51,36 +45,27 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
-
-            <TextBlock Text="Real name" Grid.Row="1" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtRealName" Style="{StaticResource BasicTextBox}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
-            <TextBlock x:Name="errRealName" Text="You must enter a name." Style="{StaticResource ErrorTextStyle}" />
-
-            <TextBlock Text="Username" Grid.Row="2" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtDescription" Style="{StaticResource BasicTextBox}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" />
-
-             <TextBlock Text="Desired password" Grid.Row="3" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtPassword" Style="{StaticResource BasicTextBox}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" />
-            <CheckBox Content="Show password" Grid.Row="3" Grid.Column="3"  Margin="10,0,0,20"/>
-    
-            <TextBlock Text="Email" Grid.Row="4" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtEmail" Style="{StaticResource BasicTextBox}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" />
-    
-            <TextBlock Text="Phone" Grid.Row="5" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtPhone" Style="{StaticResource BasicTextBox}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" />
-    
-    
-    
-            <StackPanel Orientation="Horizontal"  Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">
-                <Button x:Name="SaveAndExitBtn" Content="Save and exit" Click="SaveAndExitBtn_Click_1"/>
-                <Button x:Name="SaveAndAddAnotherBtn" Content="Save and add another" Click="SaveAndAddAnotherBtn_Click_1"/>
-            </StackPanel>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="299*" />
+                <ColumnDefinition Width="458*" />
+                <ColumnDefinition Width="140*"/>
+                <ColumnDefinition Width="449*" />
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Text="Project name" Grid.Row="0" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBox x:ConnectionId='1' x:Name="txtName" Grid.Row="0" Grid.Column="1" Style="{StaticResource BasicTextBox}"                            />
+            
+            <TextBlock Text="Description" Grid.Row="1" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBox x:ConnectionId='2' x:Name="txtDescription" Grid.Row="1" Grid.Column="1" Style="{StaticResource MultilineTextBox}"                            />
+            
+            <TextBlock Text="Start date" Grid.Row="2" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBlock Text="End date" Grid.Row="3" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
+            
+            <Button x:ConnectionId='3' x:Name="btnSaveProject" Grid.Row="4" Grid.Column="1" Content="Save project"                     />
+            
+            <TextBlock x:Name="errText" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource ErrorTextStyle}" Margin="0,10,0,0"/>
         </Grid>
-
-
         <VisualStateManager.VisualStateGroups>
 
             <!-- Visual states reflect the application's view state -->
@@ -112,3 +97,4 @@
         </VisualStateManager.VisualStateGroups>
     </Grid>
 </common:LayoutAwarePage>
+
