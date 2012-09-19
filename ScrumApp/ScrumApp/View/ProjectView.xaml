@@ -1,6 +1,6 @@
 ﻿<common:LayoutAwarePage
     x:Name="pageRoot"
-    x:Class="ScrumApp.View.AddProjectView"
+    x:Class="ScrumApp.View.ProjectView"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
     IsTabStop="false"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -9,11 +9,12 @@
     xmlns:common="using:ScrumApp.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:telerik="using:Telerik.UI.Xaml.Controls.Input"
     mc:Ignorable="d">
 
     <Page.Resources>
-        
+
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">Project view</x:String>
     </Page.Resources>
 
     <!--
@@ -34,42 +35,9 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Add new project" Style="{StaticResource PageHeaderTextStyle}"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
 
-        <!-- Main Content -->
-        <Grid Grid.Row="1" Margin="20,0,0,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="299*" />
-                <ColumnDefinition Width="458*" />
-                <ColumnDefinition Width="140*"/>
-                <ColumnDefinition Width="449*" />
-            </Grid.ColumnDefinitions>
-            
-            <TextBlock Text="Project name" Grid.Row="0" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtName" Grid.Row="0" Grid.Column="1" Style="{StaticResource BasicTextBox}" GotFocus="TextBoxGotFocus" />
-            
-            <TextBlock Text="Description" Grid.Row="1" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtDescription" Grid.Row="1" Grid.Column="1" Style="{StaticResource MultilineTextBox}" GotFocus="TextBoxGotFocus" />
-            
-            <TextBlock Text="Start date" Grid.Row="2" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
-            <telerik:RadDatePicker x:Name="dtpStartButton" Grid.Row="2" Grid.Column="1" Style="{StaticResource RadDatePickerStyle}" ValueChanged="StartDateSet" />
-            
-            <TextBlock Text="End date" Grid.Row="3" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
-            <telerik:RadDatePicker x:Name="dtpEndButton" Grid.Row="3" Grid.Column="1" IsEnabled="False" Style="{StaticResource RadDatePickerStyle}" />
-            
-            <Button x:Name="btnSaveProject" Grid.Row="4" Grid.Column="1" Content="Save project" Click="SaveProject" />
-            
-            <TextBlock x:Name="errText" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource ErrorTextStyle}" Margin="0,10,0,0"/>
-        </Grid>
         <VisualStateManager.VisualStateGroups>
 
             <!-- Visual states reflect the application's view state -->

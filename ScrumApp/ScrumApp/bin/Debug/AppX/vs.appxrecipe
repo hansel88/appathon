@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -223,4 +224,231 @@
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>SOURFACE8</Machine>
+    <WindowsUser>selbekk</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>3F35668D7A9CFDD7E397C912A25E848A49C69D2FC9ECE8407AF91D1BE8605D1C</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>21dc6ef0-444a-4e78-bd22-93af0ebda50d_1.0.0.0_neutral__65pfbmxavzvhp</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>21dc6ef0-444a-4e78-bd22-93af0ebda50d_65pfbmxavzvhp!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>21dc6ef0-444a-4e78-bd22-93af0ebda50d</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=HPL</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-09-19T19:21:22.371</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.exe">
+      <PackagePath>ScrumApp.exe</PackagePath>
+      <Modified>2012-09-19T19:55:53.619</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.pdb">
+      <PackagePath>ScrumApp.pdb</PackagePath>
+      <Modified>2012-09-19T19:55:53.595</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.pdb">
+      <PackagePath>SharedResources.pdb</PackagePath>
+      <Modified>2012-09-19T19:16:45.280</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.Core.dll">
+      <PackagePath>Telerik.Core.dll</PackagePath>
+      <Modified>2012-09-19T13:52:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.UI.Xaml.Chart.dll">
+      <PackagePath>Telerik.UI.Xaml.Chart.dll</PackagePath>
+      <Modified>2012-09-19T13:52:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.UI.Xaml.DataVisualization.dll">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization.dll</PackagePath>
+      <Modified>2012-09-19T13:53:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.UI.Xaml.Input.dll">
+      <PackagePath>Telerik.UI.Xaml.Input.dll</PackagePath>
+      <Modified>2012-09-19T13:53:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives.dll">
+      <PackagePath>Telerik.UI.Xaml.Primitives.dll</PackagePath>
+      <Modified>2012-09-19T13:52:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.dll">
+      <PackagePath>SharedResources.dll</PackagePath>
+      <Modified>2012-09-19T19:16:45.297</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.Core.xml">
+      <PackagePath>Telerik.Core.xml</PackagePath>
+      <Modified>2012-09-19T13:52:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.UI.Xaml.Chart.xml">
+      <PackagePath>Telerik.UI.Xaml.Chart.xml</PackagePath>
+      <Modified>2012-09-19T13:52:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.UI.Xaml.DataVisualization.xml">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization.xml</PackagePath>
+      <Modified>2012-09-19T13:53:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.UI.Xaml.Input.xml">
+      <PackagePath>Telerik.UI.Xaml.Input.xml</PackagePath>
+      <Modified>2012-09-19T13:53:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives.xml">
+      <PackagePath>Telerik.UI.Xaml.Primitives.xml</PackagePath>
+      <Modified>2012-09-19T13:52:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Chart\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.Chart\Themes\Generic.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.DataVisualization\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization\Themes\Generic.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Input\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.Input\Themes\Generic.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives\Themes\Generic.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Generic.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives\Themes\GlobalPaletteDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\GlobalPaletteDark.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives\Themes\GlobalPaletteLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\GlobalPaletteLight.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives\Themes\HubTile.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\HubTile.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives\Themes\Pagination.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Pagination.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.DataVisualization\Themes\PaletteDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization\Themes\PaletteDark.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Input\Themes\PaletteDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Input\Themes\PaletteDark.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives\Themes\PaletteDark.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\PaletteDark.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.DataVisualization\Themes\PaletteLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization\Themes\PaletteLight.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Input\Themes\PaletteLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Input\Themes\PaletteLight.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives\Themes\PaletteLight.xaml">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\PaletteLight.xaml</PackagePath>
+      <Modified>2012-09-19T13:52:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-09-14T21:21:21.070</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-09-14T21:21:21.071</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-09-14T21:21:21.072</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-09-14T21:21:21.072</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+      <Modified>2012-09-15T04:51:56.920</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\Colors.xaml">
+      <PackagePath>Common\Colors.xaml</PackagePath>
+      <Modified>2012-09-15T21:54:21.882</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\CustomStyles.xaml">
+      <PackagePath>Common\CustomStyles.xaml</PackagePath>
+      <Modified>2012-09-19T19:50:49.505</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2012-09-14T21:21:21.076</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\Strings.xaml">
+      <PackagePath>Common\Strings.xaml</PackagePath>
+      <Modified>2012-09-18T01:05:37.233</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Controls\AboutUserControl.xaml">
+      <PackagePath>Controls\AboutUserControl.xaml</PackagePath>
+      <Modified>2012-09-15T22:05:46.654</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Controls\PreferencesUserControl.xaml">
+      <PackagePath>Controls\PreferencesUserControl.xaml</PackagePath>
+      <Modified>2012-09-15T22:17:23.044</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Controls\PrivacyPolicyUserControl.xaml">
+      <PackagePath>Controls\PrivacyPolicyUserControl.xaml</PackagePath>
+      <Modified>2012-09-15T22:26:03.022</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddProjectView.xaml">
+      <PackagePath>View\AddProjectView.xaml</PackagePath>
+      <Modified>2012-09-19T19:55:28.620</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddUserStoryView.xaml">
+      <PackagePath>View\AddUserStoryView.xaml</PackagePath>
+      <Modified>2012-09-15T20:05:57.634</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddUserView.xaml">
+      <PackagePath>View\AddUserView.xaml</PackagePath>
+      <Modified>2012-09-19T17:49:51.987</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\DetailStoryView.xaml">
+      <PackagePath>View\DetailStoryView.xaml</PackagePath>
+      <Modified>2012-09-19T13:49:07.819</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\LoginView.xaml">
+      <PackagePath>View\LoginView.xaml</PackagePath>
+      <Modified>2012-09-18T01:12:38.236</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\MainPage.xaml">
+      <PackagePath>View\MainPage.xaml</PackagePath>
+      <Modified>2012-09-19T17:49:53.133</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\SprintView.xaml">
+      <PackagePath>View\SprintView.xaml</PackagePath>
+      <Modified>2012-09-19T13:49:07.824</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2012-09-16T01:47:17.946</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-09-19T19:21:22.307</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+>>>>>>> Added some functionality and stuffs.
 </Project>

@@ -8,7 +8,7 @@ using SharedResources.Utilities;
 
 namespace ScrumApp.ViewModel
 {
-    class ViewModelBase : INotifyPropertyChanged
+    public class ViewModelBase : INotifyPropertyChanged
     {
 
         public event PropertyChangedEventHandler PropertyChanged;
