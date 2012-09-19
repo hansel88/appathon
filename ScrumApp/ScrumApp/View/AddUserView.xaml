@@ -35,8 +35,51 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Add user" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
+<Grid Grid.Row="1" Margin="20,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="299*" />
+                <ColumnDefinition Width="458*" />
+                <ColumnDefinition Width="140*"/>
+                <ColumnDefinition Width="449*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Real name" Grid.Row="1" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBox x:Name="txtRealName" Style="{StaticResource BasicTextBox}" Grid.Row="1" Grid.Column="1" GotFocus="txtTitle_GotFocus" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="errRealName" Text="You must enter a name." Style="{StaticResource ErrorTextStyle}" />
+
+            <TextBlock Text="Username" Grid.Row="2" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBox x:Name="txtDescription" Style="{StaticResource BasicTextBox}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" />
+
+             <TextBlock Text="Desired password" Grid.Row="3" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBox x:Name="txtPassword" Style="{StaticResource BasicTextBox}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" />
+            <CheckBox Content="Show password" Grid.Row="3" Grid.Column="3"  Margin="10,0,0,20"/>
+    
+            <TextBlock Text="Email" Grid.Row="4" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBox x:Name="txtEmail" Style="{StaticResource BasicTextBox}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" />
+    
+            <TextBlock Text="Phone" Grid.Row="5" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBox x:Name="txtPhone" Style="{StaticResource BasicTextBox}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" />
+    
+    
+    
+            <StackPanel Orientation="Horizontal"  Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">
+                <Button Content="Save and exit" Click="SaveUserStory_Click" />
+                <Button Content="Save and add another" Click="SaveUserStory_Click" />
+            </StackPanel>
+        </Grid>
+
 
         <VisualStateManager.VisualStateGroups>
 
