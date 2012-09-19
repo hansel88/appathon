@@ -58,8 +58,8 @@ namespace SharedResources.Controller
             tmpProject.Sprints = newProject.Sprints ?? oldProject.Sprints;
             tmpProject.StoryQueue = newProject.StoryQueue ?? oldProject.StoryQueue;
 
-            tmpProject.EndDate =  (newProject.EndDate != new DateTime() ? newProject.EndDate : oldProject.EndDate;
-            tmpProject.StartDate =  (newProject.StartDate != new DateTime() ? newProject.StartDate : oldProject.StartDate;
+            tmpProject.EndDate =  (newProject.EndDate != new DateTime() ? newProject.EndDate : oldProject.EndDate);
+            tmpProject.StartDate =  (newProject.StartDate != new DateTime() ? newProject.StartDate : oldProject.StartDate);
 
             DataStructure.Projects.Remove(oldProject);
             DataStructure.Projects.Add(tmpProject);
