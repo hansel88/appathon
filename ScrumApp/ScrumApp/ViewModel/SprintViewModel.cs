@@ -111,7 +111,7 @@ namespace ScrumApp.ViewModel
                 {
                     switch (story.State)
                     {
-                        case StoryStates.Closed: Closed.Add(story);
+                        case StoryStates.Closed: Closed.Add(story);  
                             break;
                         case StoryStates.InAnalysis: InAnalysis.Add(story);
                             break;
@@ -164,7 +164,7 @@ namespace ScrumApp.ViewModel
             tempUser2.RealName = "Kris Selbekk";
             UserStory2.Author = tempUser;
             UserStory2.CreatedDate = DateTime.Now;
-            UserStory2.Priority = 900;
+            UserStory2 .Priority = 900;
 
             Comment c12 = new Comment();
             c12.Author = tempUser;
