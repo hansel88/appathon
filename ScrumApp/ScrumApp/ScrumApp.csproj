@@ -233,15 +233,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Telerik.Core">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.UI.Xaml.Input">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.UI.Xaml.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.UI.Xaml.Primitives">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\Telerik.UI.Xaml.Primitives.dll</HintPath>
-    </Reference>
+    <SDKReference Include="Telerik.UI.Xaml, Version=2012.1.0919">
+      <Name>RadControls for Metro</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
