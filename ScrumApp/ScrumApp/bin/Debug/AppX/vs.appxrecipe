@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>SOURFACE8</Machine>
-    <WindowsUser>selbekk</WindowsUser>
+    <Machine>HPL-PC</Machine>
+    <WindowsUser>HPL</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <RegisteredManifestChecksum>9765145E73167B8FA998B828EFEA8904F72A289A3A7E2092E7641D16501FB750</RegisteredManifestChecksum>
@@ -13,24 +13,24 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-09-19T21:29:54.389</Modified>
+      <Modified>2012-09-19T23:16:00.133</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.exe">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.exe">
       <PackagePath>ScrumApp.exe</PackagePath>
-      <Modified>2012-09-19T21:40:05.298</Modified>
+      <Modified>2012-09-19T23:21:04.058</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.pdb">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.pdb">
       <PackagePath>ScrumApp.pdb</PackagePath>
-      <Modified>2012-09-19T21:40:05.280</Modified>
+      <Modified>2012-09-19T23:21:04.049</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.pdb">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.pdb">
       <PackagePath>SharedResources.pdb</PackagePath>
-      <Modified>2012-09-19T21:40:04.172</Modified>
+      <Modified>2012-09-19T23:21:02.508</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.Core.dll">
       <PackagePath>Telerik.Core.dll</PackagePath>
@@ -52,9 +52,9 @@
       <PackagePath>Telerik.UI.Xaml.Primitives.dll</PackagePath>
       <Modified>2012-09-19T13:52:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.dll">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.dll">
       <PackagePath>SharedResources.dll</PackagePath>
-      <Modified>2012-09-19T21:40:04.190</Modified>
+      <Modified>2012-09-19T23:21:02.520</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.Core.xml">
       <PackagePath>Telerik.Core.xml</PackagePath>
@@ -132,97 +132,97 @@
       <PackagePath>Telerik.UI.Xaml.Primitives\Themes\PaletteLight.xaml</PackagePath>
       <Modified>2012-09-19T13:52:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-09-14T21:21:21.070</Modified>
+      <Modified>2012-09-17T13:27:19.178</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-09-14T21:21:21.071</Modified>
+      <Modified>2012-09-17T13:27:19.179</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-09-14T21:21:21.072</Modified>
+      <Modified>2012-09-17T13:27:19.180</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-09-14T21:21:21.072</Modified>
+      <Modified>2012-09-17T13:27:19.180</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\Common\ReadMe.txt">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>
-      <Modified>2012-09-15T04:51:56.920</Modified>
+      <Modified>2012-09-17T13:27:19.188</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\Colors.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\Colors.xaml">
       <PackagePath>Common\Colors.xaml</PackagePath>
-      <Modified>2012-09-15T21:54:21.882</Modified>
+      <Modified>2012-09-17T13:27:19.185</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\CustomStyles.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\CustomStyles.xaml">
       <PackagePath>Common\CustomStyles.xaml</PackagePath>
-      <Modified>2012-09-19T21:02:49.229</Modified>
+      <Modified>2012-09-19T23:16:00.095</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\StandardStyles.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
-      <Modified>2012-09-14T21:21:21.076</Modified>
+      <Modified>2012-09-17T13:27:19.190</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\Strings.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\Strings.xaml">
       <PackagePath>Common\Strings.xaml</PackagePath>
-      <Modified>2012-09-19T21:02:49.230</Modified>
+      <Modified>2012-09-19T23:16:00.095</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Controls\AboutUserControl.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Controls\AboutUserControl.xaml">
       <PackagePath>Controls\AboutUserControl.xaml</PackagePath>
-      <Modified>2012-09-15T22:05:46.654</Modified>
+      <Modified>2012-09-17T13:27:19.195</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Controls\PreferencesUserControl.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Controls\PreferencesUserControl.xaml">
       <PackagePath>Controls\PreferencesUserControl.xaml</PackagePath>
-      <Modified>2012-09-15T22:17:23.044</Modified>
+      <Modified>2012-09-17T13:27:19.196</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Controls\PrivacyPolicyUserControl.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Controls\PrivacyPolicyUserControl.xaml">
       <PackagePath>Controls\PrivacyPolicyUserControl.xaml</PackagePath>
-      <Modified>2012-09-15T22:26:03.022</Modified>
+      <Modified>2012-09-17T13:27:19.198</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddProjectView.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddProjectView.xaml">
       <PackagePath>View\AddProjectView.xaml</PackagePath>
-      <Modified>2012-09-19T21:02:49.231</Modified>
+      <Modified>2012-09-19T23:16:00.097</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddUserStoryView.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddUserStoryView.xaml">
       <PackagePath>View\AddUserStoryView.xaml</PackagePath>
-      <Modified>2012-09-15T20:05:57.634</Modified>
+      <Modified>2012-09-17T13:27:19.204</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddUserView.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddUserView.xaml">
       <PackagePath>View\AddUserView.xaml</PackagePath>
-      <Modified>2012-09-19T21:02:47.287</Modified>
+      <Modified>2012-09-19T20:18:03.102</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\DetailStoryView.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\DetailStoryView.xaml">
       <PackagePath>View\DetailStoryView.xaml</PackagePath>
-      <Modified>2012-09-19T13:49:07.819</Modified>
+      <Modified>2012-09-19T13:03:23.347</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\LoginView.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\LoginView.xaml">
       <PackagePath>View\LoginView.xaml</PackagePath>
-      <Modified>2012-09-18T01:12:38.236</Modified>
+      <Modified>2012-09-18T23:31:12.585</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\MainPage.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\MainPage.xaml">
       <PackagePath>View\MainPage.xaml</PackagePath>
-      <Modified>2012-09-19T21:02:47.292</Modified>
+      <Modified>2012-09-19T18:33:04.578</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\ProjectView.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\ProjectView.xaml">
       <PackagePath>View\ProjectView.xaml</PackagePath>
-      <Modified>2012-09-19T21:02:49.233</Modified>
+      <Modified>2012-09-19T23:16:00.099</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\SprintView.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\SprintView.xaml">
       <PackagePath>View\SprintView.xaml</PackagePath>
-      <Modified>2012-09-19T13:49:07.824</Modified>
+      <Modified>2012-09-19T13:18:09.446</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\App.xaml">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
-      <Modified>2012-09-16T01:47:17.946</Modified>
+      <Modified>2012-09-18T23:31:12.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-09-19T21:10:53.751</Modified>
+      <Modified>2012-09-19T23:21:04.193</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

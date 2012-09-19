@@ -11,7 +11,7 @@ namespace SharedResources.Model
     {
 
         #region Properties
-
+ 
         private string _userName;
         public string UserName
         {
@@ -93,6 +93,20 @@ namespace SharedResources.Model
             {
                 _accessLevel = value;
                 onPropertyChanged("AccessLevel");
+            }
+        }
+
+        private string _gravatarImageUrl;
+        public string GravatarImageUrl
+        {
+            get
+            {
+                return "www.gravatar.com/avatar/" + "<md5-hash av email>?w=<bredden / høyden på bildet>";
+            }
+            set
+            {
+                _gravatarImageUrl = value;
+                onPropertyChanged("GravatarImageUrl");
             }
         }
 

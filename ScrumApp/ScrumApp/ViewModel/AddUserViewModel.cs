@@ -15,7 +15,7 @@ namespace ScrumApp.ViewModel
             PermissionLevel permissionLevel = new PermissionLevel();
             switch (permissionLevelString)
             {
-                case "User": permissionLevel = PermissionLevel.UserOnly;
+                case "User": permissionLevel = PermissionLevel.UserOnly; 
                     break;
                 case "Administrator": permissionLevel = PermissionLevel.AdminOnly;
                     break;
