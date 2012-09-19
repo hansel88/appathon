@@ -38,70 +38,126 @@
         </Grid>
         <Grid Grid.Row="1" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal" Margin="20,150">
-                <ListBox x:Name="OpenList" ItemsSource="{Binding Open}" Width="250" Margin="0,0,20,0">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Open"  FontSize="50"/>
+                      <ListBox x:Name="OpenList" ItemsSource="{Binding Open}" Background="Transparent" Width="250" Margin="0,0,20,0">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <ListBoxItem>
                                 <StackPanel Margin="0,0,0,10" Orientation="Vertical">
-                                    <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}" />
+                                    <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}"  TextWrapping="Wrap"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock FontSize="20" Foreground="Orange" Text="Assignee: " />
-                                        <TextBlock FontSize="20" Foreground="Orange" Text="{Binding Author.RealName}" />
+                                        <TextBlock FontSize="20" Foreground="White" Text="Priority: "  TextWrapping="Wrap"/>
+                                        <TextBlock FontSize="20" Foreground="White" Text="{Binding Priority}" TextWrapping="Wrap" />
                                     </StackPanel>
-                                    <TextBlock FontSize="20" Foreground="Orange" Text="{Binding Description}" />
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock FontSize="20" Foreground="White" Text="Assignee: "  TextWrapping="Wrap"/>
+                                        <TextBlock FontSize="20" Foreground="White" Text="{Binding Author.RealName}" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                    <TextBlock FontSize="20" Foreground="White" Text="{Binding Description}" TextWrapping="Wrap" />
                                 </StackPanel>
                             </ListBoxItem>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
+                </StackPanel>
+              
 
-                <ListBox x:Name="InAnalysisList" ItemsSource="{Binding InAnalysis}" Width="250" Margin="0,0,20,0">
+                 <StackPanel Orientation="Vertical">
+                    <TextBlock Text="In Analysis"  FontSize="50"/>
+                      <ListBox x:Name="InAnalysisList" ItemsSource="{Binding InAnalysis}" Background="Transparent" Width="250" Margin="0,0,20,0">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <ListBoxItem>
-                                <StackPanel Margin="0,0,0,10">
-                                    <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}" />
+                                <StackPanel Margin="0,0,0,10" Orientation="Vertical">
+                                    <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}"  TextWrapping="Wrap"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock FontSize="20" Foreground="White" Text="Priority: "  TextWrapping="Wrap"/>
+                                        <TextBlock FontSize="20" Foreground="White" Text="{Binding Priority}" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock FontSize="20" Foreground="White" Text="Assignee: "  TextWrapping="Wrap"/>
+                                        <TextBlock FontSize="20" Foreground="White" Text="{Binding Author.RealName}" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                    <TextBlock FontSize="20" Foreground="White" Text="{Binding Description}" TextWrapping="Wrap" />
                                 </StackPanel>
                             </ListBoxItem>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
+                </StackPanel>
 
-                <ListBox x:Name="InProgressList" ItemsSource="{Binding InProgress}" Width="250" Margin="0,0,20,0">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="In Progress"  FontSize="50"/>
+                    <ListBox x:Name="InProgressList" ItemsSource="{Binding InProgress}" Background="Transparent" Width="250" Margin="0,0,20,0">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <ListBoxItem>
+                                    <StackPanel Margin="0,0,0,10" Orientation="Vertical">
+                                        <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}"  TextWrapping="Wrap"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock FontSize="20" Foreground="White" Text="Priority: "  TextWrapping="Wrap"/>
+                                            <TextBlock FontSize="20" Foreground="White" Text="{Binding Priority}" TextWrapping="Wrap" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock FontSize="20" Foreground="White" Text="Assignee: "  TextWrapping="Wrap"/>
+                                            <TextBlock FontSize="20" Foreground="White" Text="{Binding Author.RealName}" TextWrapping="Wrap" />
+                                        </StackPanel>
+                                        <TextBlock FontSize="20" Foreground="White" Text="{Binding Description}" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                </ListBoxItem>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+
+                 <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Testing"  FontSize="50"/>
+                      <ListBox x:Name="TestingList" ItemsSource="{Binding Testing}" Background="Transparent" Width="250" Margin="0,0,20,0">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <ListBoxItem>
-                                <StackPanel Margin="0,0,0,10">
-                                    <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}" />
+                                <StackPanel Margin="0,0,0,10" Orientation="Vertical">
+                                    <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}"  TextWrapping="Wrap"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock FontSize="20" Foreground="White" Text="Priority: "  TextWrapping="Wrap"/>
+                                        <TextBlock FontSize="20" Foreground="White" Text="{Binding Priority}" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock FontSize="20" Foreground="White" Text="Assignee: "  TextWrapping="Wrap"/>
+                                        <TextBlock FontSize="20" Foreground="White" Text="{Binding Author.RealName}" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                    <TextBlock FontSize="20" Foreground="White" Text="{Binding Description}" TextWrapping="Wrap" />
                                 </StackPanel>
                             </ListBoxItem>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-
-                <ListBox x:Name="TestingList" ItemsSource="{Binding Testing}" Width="250" Margin="0,0,20,0">
+                </StackPanel>
+                
+                 <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Closed"  FontSize="50"/>
+                      <ListBox x:Name="ClosedList" ItemsSource="{Binding Closed}" Background="Transparent" Width="250" Margin="0,0,20,0">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <ListBoxItem>
-                                <StackPanel Margin="0,0,0,10">
-                                    <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}" />
+                                <StackPanel Margin="0,0,0,10" Orientation="Vertical">
+                                    <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}"  TextWrapping="Wrap"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock FontSize="20" Foreground="White" Text="Priority: "  TextWrapping="Wrap"/>
+                                        <TextBlock FontSize="20" Foreground="White" Text="{Binding Priority}" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock FontSize="20" Foreground="White" Text="Assignee: "  TextWrapping="Wrap"/>
+                                        <TextBlock FontSize="20" Foreground="White" Text="{Binding Author.RealName}" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                    <TextBlock FontSize="20" Foreground="White" Text="{Binding Description}" TextWrapping="Wrap" />
                                 </StackPanel>
                             </ListBoxItem>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-
-                <ListBox x:Name="ClosedList" ItemsSource="{Binding Closed}" Width="250" Margin="0,0,20,0">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <ListBoxItem>
-                                <StackPanel Margin="0,0,0,10">
-                                    <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Title}" />
-                                </StackPanel>
-                            </ListBoxItem>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                </StackPanel>
             </StackPanel>
         </Grid>
         

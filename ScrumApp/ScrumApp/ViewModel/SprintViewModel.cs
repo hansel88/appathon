@@ -152,8 +152,8 @@ namespace ScrumApp.ViewModel
             UserStory.Comments.Add(c2);
             UserStory.Assignee = tempUser;
 
-            UserStory.State = StoryStates.InAnalysis;
-            InAnalysis.Add(UserStory);
+            UserStory.State = StoryStates.Open;
+            Open.Add(UserStory);
             ///////////////////
             Story UserStory2 = new Story();
             UserStory2.Description = "Random description. blablablablablablabla. blablalbllalblalbal";

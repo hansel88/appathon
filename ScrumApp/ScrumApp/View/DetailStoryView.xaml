@@ -60,7 +60,7 @@
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <ListBoxItem>
-                                        <StackPanel Margin="-18,0,0,0">
+                                        <StackPanel Margin="-18,0,0,0" Orientation="Vertical">
                                             <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Author.RealName}" />
                                             <TextBlock FontSize="25" TextWrapping="Wrap" Foreground="White" Text="{Binding Text}" />
                                         </StackPanel>
