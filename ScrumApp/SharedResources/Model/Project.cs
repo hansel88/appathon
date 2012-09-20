@@ -91,5 +91,19 @@ namespace SharedResources.Model
                 onPropertyChanged("EndDate");
             }
         }
+
+        private List<User> _registeredUsers;
+        public List<User> RegisteredUsers
+        {
+            get
+            {
+                return _registeredUsers;
+            }
+            set
+            {
+                _registeredUsers = value;
+                onPropertyChanged("RegisteredUsers");
+            }
+        }
     }
 }

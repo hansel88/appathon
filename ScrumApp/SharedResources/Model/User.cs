@@ -51,6 +51,7 @@ namespace SharedResources.Model
             {
                 _email = value;
                 onPropertyChanged("Email");
+                onPropertyChanged("GravatarImageUrl");
             }
         }
 
@@ -96,17 +97,11 @@ namespace SharedResources.Model
             }
         }
 
-        private string _gravatarImageUrl;
         public string GravatarImageUrl
         {
             get
             {
-                return "www.gravatar.com/avatar/" + "<md5-hash av email>?w=<bredden / høyden på bildet>";
-            }
-            set
-            {
-                _gravatarImageUrl = value;
-                onPropertyChanged("GravatarImageUrl");
+                return "http://www.gravatar.com/avatar/" + "someMD5hash" + "?s=250";
             }
         }
 

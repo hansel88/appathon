@@ -88,7 +88,7 @@ namespace ScrumApp.View
             }
             catch (ArgumentNullException ex)
             {
-                errText.Text = ex.Message;
+                errText.Text = App.Current.Resources["errGeneralError"] as String;
                 errText.Visibility = Visibility.Visible;
             }
             catch (ArgumentException ex)

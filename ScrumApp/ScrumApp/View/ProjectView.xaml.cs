@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using ScrumApp.ViewModel;
+using SharedResources.Model;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -24,7 +26,11 @@ namespace ScrumApp.View
         public ProjectView()
         {
             this.InitializeComponent();
+            vm = new ProjectViewModel();
+            this.DataContext = vm;
         }
+
+        private ProjectViewModel vm;
 
         /// <summary>
         /// Populates the page with content passed during navigation.  Any saved state is also
@@ -37,6 +43,15 @@ namespace ScrumApp.View
         /// session.  This will be null the first time a page is visited.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
+            var project = navigationParameter as Project;
+            if (project == null)
+            {
+                // TODO: Error handling for missing project
+            }
+            else
+            {
+                vm.CurrentProject = project;
+            }
         }
 
         /// <summary>

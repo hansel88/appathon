@@ -27,8 +27,9 @@ namespace SharedResources.Controller
                 throw new ArgumentException("A project with the same name was found.");
 
             // TODO: Add owner?
-            project.Sprints = new List<Sprint>();
-            project.StoryQueue = new List<Story>();
+            //project.Sprints = new List<Sprint>();
+            //project.StoryQueue = new List<Story>();
+            //project.RegisteredUsers = new List<User>();
 
             DataStructure.Projects.Add(project);
 

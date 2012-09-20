@@ -100,7 +100,10 @@ namespace SharedResources.Model
         {
             get
             {
-                return _assignee;
+                if( _assignee != null )
+                    return _assignee;
+
+                return new User() { RealName = "Nobody assigned" };
             }
             set
             {

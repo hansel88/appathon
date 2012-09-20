@@ -8,6 +8,20 @@ namespace SharedResources.Model
 {
     public class Sprint : ModelBase
     {
+        private string _title;
+        public string Title
+        {
+            get
+            {
+                return _title;
+            }
+            set
+            {
+                _title = value;
+                onPropertyChanged("Title");
+            }
+        }
+
         private List<Story> _stories;
         public List<Story> Stories
         {
@@ -75,6 +89,14 @@ namespace SharedResources.Model
             {
                 _description = value;
                 onPropertyChanged("Description");
+            }
+        }
+
+        public string StartAndEndDates
+        {
+            get
+            {
+                return StartTime.ToString("d") + " - " + EndTime.ToString("d");
             }
         }
     }

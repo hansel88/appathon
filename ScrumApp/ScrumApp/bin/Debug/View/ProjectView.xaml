@@ -12,9 +12,6 @@
     mc:Ignorable="d">
 
     <Page.Resources>
-
-        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">Project view</x:String>
     </Page.Resources>
 
     <!--
@@ -35,9 +32,151 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:ConnectionId='1' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{Binding PageTitle}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
 
+        <!-- Horizontally scrollable view -->
+        <ScrollViewer
+            Height="500"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            Margin="20,0,20,0"
+            ScrollViewer.HorizontalScrollBarVisibility="Auto"
+            ScrollViewer.VerticalScrollBarVisibility="Disabled"
+            ScrollViewer.HorizontalScrollMode="Enabled"
+            ScrollViewer.VerticalScrollMode="Disabled"
+            ScrollViewer.ZoomMode="Disabled">
+            
+            <StackPanel Orientation="Horizontal">
+                
+                <!-- Project information -->
+                <StackPanel Width="500">
+                    <TextBlock Text="Details" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,20" />
+                    <TextBlock Text="{Binding StartAndEndDates}" Style="{StaticResource CaptionTextStyle}" />
+                    <TextBlock Text="{Binding CurrentProject.Description}" Style="{StaticResource BodyTextStyle}" />
+                </StackPanel>
+            
+                <!-- Work items -->
+                <StackPanel Width="500">
+                    <TextBlock Text="Work items" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,20" />
+                    <ListView x:Name="listWorkItems" ItemsSource="{Binding CurrentProject.StoryQueue}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Height="110" Width="480" Margin="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
+                                        
+                                    </Border>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                                        <TextBlock Text="{Binding Title}" Style="{StaticResource TitleTextStyle}" Foreground="Black" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding Assignee.RealName}" Style="{StaticResource CaptionTextStyle}" Foreground="Gray" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding Description}" Style="{StaticResource BodyTextStyle}" Foreground="Black" TextWrapping="Wrap" MaxHeight="60"/>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        
+                        <ListViewItem>
+                            <Grid Height="110" Width="480" Margin="10" Background="White">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
+                                    <Button Style="{StaticResource AddAppBarButtonStyle}" />
+                                </Border>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                                    <TextBlock Text="Add a new work story" Style="{StaticResource TitleTextStyle}" Foreground="Black" TextWrapping="Wrap"/>
+                                    <TextBlock Text="A project consists of many smaller tasks. These are those tasks." Style="{StaticResource BodyTextStyle}" Foreground="Black" MaxHeight="60" TextWrapping="Wrap"/>
+                                </StackPanel>
+                            </Grid>
+                        </ListViewItem>
+                    </ListView>
+                </StackPanel>
+                
+                <!-- Sprints -->
+                <StackPanel Width="500">
+                    <TextBlock Text="Sprints" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,20" />
+                    <ListView x:Name="listSprints" ItemsSource="{Binding CurrentProject.Sprints}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Height="110" Width="480" Margin="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
+                                        <Button Style="{StaticResource AddAppBarButtonStyle}" />
+                                    </Border>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                                        <TextBlock Text="{Binding Title}" Style="{StaticResource TitleTextStyle}" Foreground="Black" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding StartAndEndDates}" Style="{StaticResource CaptionTextStyle}" Foreground="Gray" TextWrapping="Wrap"/>
+                                        <TextBlock Text="{Binding Description}" Style="{StaticResource BodyTextStyle}" Foreground="Black" MaxHeight="60" TextWrapping="Wrap"/>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                        <ListViewItem>
+                            <Grid Height="110" Width="480" Margin="10" Background="White">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
+                                    <Button Style="{StaticResource AddAppBarButtonStyle}" VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                                    <TextBlock Text="Set up a new sprint" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap" Foreground="Black" />
+                                    <TextBlock Text="A typical sprint is a couple of weeks. This is where you add them" Style="{StaticResource BodyTextStyle}" TextWrapping="Wrap" Foreground="Black" MaxHeight="60"/>
+                                </StackPanel>
+                            </Grid>
+                        </ListViewItem>
+                    </ListView>
+                </StackPanel>
+                
+                <!-- Users -->
+                <StackPanel Width="600">
+                    <TextBlock Text="Registered users" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,20" />
+                    <ListView x:Name="listRegUsers" ItemsSource="{Binding CurrentProject.RegisteredUsers}">
+                        <ListView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </ListView.ItemsPanel>
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid HorizontalAlignment="Left" Width="250" Height="250">
+                                    <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                                        <Image Source="{Binding GravatarImageUrl}" Stretch="UniformToFill"/>
+                                    </Border>
+                                    <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                                        <TextBlock Text="{Binding FullName}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0"/>
+                                        <TextBlock Text="{Binding Email}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                        <ListViewItem>
+                            <Grid HorizontalAlignment="Left" Width="250" Height="250">
+                                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
+                                    <Rectangle Fill="Gray" Stretch="UniformToFill"/>
+                                </Border>
+                                <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
+                                    <TextBlock Text="Add user" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0"/>
+                                </StackPanel>
+                            </Grid>
+                        </ListViewItem>
+                    </ListView>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        
         <VisualStateManager.VisualStateGroups>
 
             <!-- Visual states reflect the application's view state -->
