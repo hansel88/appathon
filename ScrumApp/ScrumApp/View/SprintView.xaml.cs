@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ScrumApp.ViewModel;
+using SharedResources.Model;
+using SharedResources.Utilities;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -42,6 +44,36 @@ namespace ScrumApp.View
         /// session.  This will be null the first time a page is visited.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
+            var sprint = navigationParameter as Sprint;
+            if (sprint == null)
+            {
+                // TODO: Error handling for missing project
+            }
+            else
+            {
+                sprintViewModel.CurrentSprint = sprint;
+
+                foreach (Story story in sprint.Stories)
+                {
+                    switch (story.State)
+                    {
+                        case StoryStates.Closed: sprintViewModel.Closed.Add(story);
+                            break;
+                        case StoryStates.InAnalysis: sprintViewModel.InAnalysis.Add(story);
+                            break;
+                        case StoryStates.InProgress: sprintViewModel.InProgress.Add(story);
+                            break;
+                        case StoryStates.Open: sprintViewModel.Open.Add(story);
+                            break;
+                        case StoryStates.Testing: sprintViewModel.Testing.Add(story);
+                            break;
+                        case StoryStates.Unassigned:
+                            break;
+                    }
+                }
+            }
+
+           
         }
 
         /// <summary>

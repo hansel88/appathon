@@ -26,10 +26,6 @@ namespace ScrumApp.ViewModel
 
         public DetailStoryViewModel()
         {
-            if (NavigationUtility.PassedObject != null && NavigationUtility.PassedObject is Story)
-            {
-                UserStory = NavigationUtility.PassedObject as Story;
-            }
 
             //temp drit
             UserStory = new Story();
