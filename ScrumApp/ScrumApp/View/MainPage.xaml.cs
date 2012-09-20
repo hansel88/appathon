@@ -67,5 +67,10 @@ namespace ScrumApp
             this.Frame.Navigate(typeof(AddUserView));
         }
 
+        private void DetailUserViewButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(DetailUserView));
+        }
+
     }
 }

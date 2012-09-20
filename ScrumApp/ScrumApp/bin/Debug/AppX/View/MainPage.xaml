@@ -11,14 +11,15 @@
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Orientation="Vertical" Margin="0,30">
-                <Button x:ConnectionId='4' x:Name="testButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="detailStoryView"                           />
-                <Button x:ConnectionId='5' x:Name="SprintViewTestButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="SprintView"                                     />
-                <Button x:ConnectionId='6' x:Name="AddUserStoryTestButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="Add User Story view"                                     />
+                <Button x:ConnectionId='5' x:Name="testButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="detailStoryView"                           />
+                <Button x:ConnectionId='6' x:Name="SprintViewTestButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="SprintView"                                     />
+                <Button x:ConnectionId='7' x:Name="AddUserStoryTestButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="Add User Story view"                                     />
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="0,30">
                 <Button x:ConnectionId='1' x:Name="LoginViewTestButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="Login view"                                     />
                 <Button x:ConnectionId='2' x:Name="AddProjectViewTestButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="Add project view"                                     />
                 <Button x:ConnectionId='3' x:Name="AddUserTestButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="Add User view"                                   />
+                <Button x:ConnectionId='4' x:Name="DetailUserViewButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="Detail User View"                                      />
             </StackPanel>
         </StackPanel>
         

@@ -19,6 +19,7 @@
                 <Button x:Name="LoginViewTestButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="Login view" Click="SprintViewTestButton_Click_3"/>
                 <Button x:Name="AddProjectViewTestButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="Add project view" Click="SprintViewTestButton_Click_4"/>
                 <Button x:Name="AddUserTestButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="Add User view" Click="AddUserTestButton_Click_1" />
+                <Button x:Name="DetailUserViewButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Height="150" Content="Detail User View"  Click="DetailUserViewButton_Click_1"/>
             </StackPanel>
         </StackPanel>
         

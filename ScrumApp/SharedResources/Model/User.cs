@@ -105,6 +105,22 @@ namespace SharedResources.Model
             }
         }
 
+        public string PermissionLevelString
+        {
+            get
+            {
+                switch (AccessLevel)
+                {
+                    case PermissionLevel.AdminOnly: return "Administrator";
+                        
+                    case PermissionLevel.Open: return "Open";
+                        
+                    default: return "User";
+                        
+                }
+            }
+        }
+
 
         #endregion
 

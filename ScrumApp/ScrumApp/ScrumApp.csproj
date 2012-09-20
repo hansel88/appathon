@@ -123,6 +123,7 @@
     <Compile Include="ViewModel\AddUserStoryViewModel.cs" />
     <Compile Include="ViewModel\AddUserViewModel.cs" />
     <Compile Include="ViewModel\DetailStoryViewModel.cs" />
+    <Compile Include="ViewModel\DetailUserViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\ProjectViewModel.cs" />
     <Compile Include="ViewModel\SprintViewModel.cs" />
@@ -138,6 +139,9 @@
     </Compile>
     <Compile Include="View\DetailStoryView.xaml.cs">
       <DependentUpon>DetailStoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DetailUserView.xaml.cs">
+      <DependentUpon>DetailUserView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
@@ -215,6 +219,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DetailStoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DetailUserView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

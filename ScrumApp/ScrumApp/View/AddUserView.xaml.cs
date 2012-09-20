@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ScrumApp.ViewModel;
 using System.Text.RegularExpressions;
+using SharedResources.Utilities;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -92,11 +93,18 @@ namespace ScrumApp.View
                 errorBox.Text += "*Invalid email-address.\n";
                 ok = false;
             }
-            // TOOO: Check if username already exists
             if (ok)
             {
-                addUserViewModel.saveUser(txtRealName.Text, txtUserName.Text, txtPassword.Password, txtEmail.Text, txtPhone.Text, PermissionBox.SelectedItem as string);
-                return true;
+                if (DataStructure.Users.Find(u => u.UserName == txtUserName.Text) == null)
+                {
+                    addUserViewModel.saveUser(txtRealName.Text, txtUserName.Text, txtPassword.Password, txtEmail.Text, txtPhone.Text, PermissionBox.SelectedItem as string);
+                    return true;
+                }
+                else
+                {
+                    errorBox.Text = "*This username is already taken.\n";
+                    return false;
+                }
             }
             else
             {
