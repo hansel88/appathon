@@ -72,5 +72,10 @@ namespace ScrumApp
             this.Frame.Navigate(typeof(DetailUserView));
         }
 
+        private void ShowAllProjectsView_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AllProjectsView));
+        }
+
     }
 }

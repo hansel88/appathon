@@ -38,7 +38,7 @@ namespace ScrumApp.ViewModel
             {
                 if (CurrentProject != null)
                 {
-                    return "Edit project - " + CurrentProject.Name;
+                    return "Overview - " + CurrentProject.Name;
                 }
                 else
                 {

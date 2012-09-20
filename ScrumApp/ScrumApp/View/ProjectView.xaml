@@ -59,7 +59,24 @@
                 <!-- Work items -->
                 <StackPanel Width="500">
                     <TextBlock Text="Work items" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,20" />
-                    <ListView x:Name="listWorkItems" ItemsSource="{Binding CurrentProject.StoryQueue}">
+                    
+                    <!-- Add work item button -->
+                    <Grid Height="110" Width="480" Background="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
+                            <Button Style="{StaticResource AddAppBarButtonStyle}" />
+                        </Border>
+                        <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                            <TextBlock Text="Add a new work story" Style="{StaticResource TitleTextStyle}" Foreground="Black" TextWrapping="Wrap"/>
+                            <TextBlock Text="A project consists of many smaller tasks. These are those tasks." Style="{StaticResource BodyTextStyle}" Foreground="Black" MaxHeight="60" TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Grid>
+                    
+                    <!-- List of current work items -->
+                    <ListView x:Name="listWorkItems" ItemsSource="{Binding CurrentProject.StoryQueue}" SelectionMode="None">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <Grid Height="110" Width="480" Margin="10">
@@ -78,29 +95,30 @@
                                 </Grid>
                             </DataTemplate>
                         </ListView.ItemTemplate>
-                        
-                        <ListViewItem>
-                            <Grid Height="110" Width="480" Margin="10" Background="White">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
-                                    <Button Style="{StaticResource AddAppBarButtonStyle}" />
-                                </Border>
-                                <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
-                                    <TextBlock Text="Add a new work story" Style="{StaticResource TitleTextStyle}" Foreground="Black" TextWrapping="Wrap"/>
-                                    <TextBlock Text="A project consists of many smaller tasks. These are those tasks." Style="{StaticResource BodyTextStyle}" Foreground="Black" MaxHeight="60" TextWrapping="Wrap"/>
-                                </StackPanel>
-                            </Grid>
-                        </ListViewItem>
                     </ListView>
                 </StackPanel>
                 
                 <!-- Sprints -->
                 <StackPanel Width="500">
                     <TextBlock Text="Sprints" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,20" />
-                    <ListView x:Name="listSprints" ItemsSource="{Binding CurrentProject.Sprints}">
+                    
+                    <!-- Add new sprint button -->
+                    <Grid Height="110" Width="480" Background="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
+                            <Button Style="{StaticResource AddAppBarButtonStyle}" VerticalAlignment="Center"/>
+                        </Border>
+                        <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                            <TextBlock Text="Set up a new sprint" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap" Foreground="Black" />
+                            <TextBlock Text="A typical sprint is a couple of weeks. This is where you add them" Style="{StaticResource BodyTextStyle}" TextWrapping="Wrap" Foreground="Black" MaxHeight="60"/>
+                        </StackPanel>
+                    </Grid>
+                    
+                    <!-- Existing sprints -->
+                    <ListView x:Name="listSprints" ItemsSource="{Binding CurrentProject.Sprints}" SelectionMode="None">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <Grid Height="110" Width="480" Margin="10">
@@ -119,32 +137,17 @@
                                 </Grid>
                             </DataTemplate>
                         </ListView.ItemTemplate>
-
-                        <ListViewItem>
-                            <Grid Height="110" Width="480" Margin="10" Background="White">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
-                                    <Button Style="{StaticResource AddAppBarButtonStyle}" VerticalAlignment="Center"/>
-                                </Border>
-                                <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
-                                    <TextBlock Text="Set up a new sprint" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap" Foreground="Black" />
-                                    <TextBlock Text="A typical sprint is a couple of weeks. This is where you add them" Style="{StaticResource BodyTextStyle}" TextWrapping="Wrap" Foreground="Black" MaxHeight="60"/>
-                                </StackPanel>
-                            </Grid>
-                        </ListViewItem>
                     </ListView>
                 </StackPanel>
                 
                 <!-- Users -->
                 <StackPanel Width="600">
-                    <TextBlock Text="Registered users" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,20" />
+                    <TextBlock Text="Collaborators" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,20" />
+                    
                     <ListView x:Name="listRegUsers" ItemsSource="{Binding CurrentProject.RegisteredUsers}">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
-                                <StackPanel Orientation="Horizontal" />
+                                <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="2"/>
                             </ItemsPanelTemplate>
                         </ListView.ItemsPanel>
 
@@ -161,17 +164,6 @@
                                 </Grid>
                             </DataTemplate>
                         </ListView.ItemTemplate>
-
-                        <ListViewItem>
-                            <Grid HorizontalAlignment="Left" Width="250" Height="250">
-                                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
-                                    <Rectangle Fill="Gray" Stretch="UniformToFill"/>
-                                </Border>
-                                <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
-                                    <TextBlock Text="Add user" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0"/>
-                                </StackPanel>
-                            </Grid>
-                        </ListViewItem>
                     </ListView>
                 </StackPanel>
             </StackPanel>

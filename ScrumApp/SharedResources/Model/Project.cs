@@ -105,5 +105,17 @@ namespace SharedResources.Model
                 onPropertyChanged("RegisteredUsers");
             }
         }
+
+        #region Derived properties
+
+        public string StartToEndDate
+        {
+            get
+            {
+                return StartDate.ToString("d") + " - " + EndDate.ToString("d");
+            }
+        }
+
+        #endregion
     }
 }
