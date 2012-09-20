@@ -118,7 +118,7 @@
                     </Grid>
                     
                     <!-- Existing sprints -->
-                    <ListView x:Name="listSprints" ItemsSource="{Binding CurrentProject.Sprints}">
+                    <ListView x:Name="listSprints" ItemsSource="{Binding CurrentProject.Sprints}" SelectionMode="None">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <Grid Height="110" Width="480" Margin="10">

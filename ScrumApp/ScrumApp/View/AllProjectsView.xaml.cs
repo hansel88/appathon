@@ -46,6 +46,9 @@ namespace ScrumApp.View
         /// session.  This will be null the first time a page is visited.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
+            
+            errText.Visibility = ((vm.Projects == null || vm.Projects.Count == 0) ? Visibility.Visible : Visibility.Collapsed);
+            
             // TODO: Assign a bindable group to this.DefaultViewModel["Group"]
             // TODO: Assign a collection of bindable items to this.DefaultViewModel["Items"]
 
@@ -127,6 +130,7 @@ namespace ScrumApp.View
             // to showing the selected item's details.  When the selection is cleared this has the
             // opposite effect.
             if (this.UsingLogicalPageNavigation()) this.InvalidateVisualState();
+            ViewProjectButton.Visibility = (itemListView.SelectedItem != null ? Visibility.Visible : Visibility.Collapsed);
         }
 
         /// <summary>
@@ -186,5 +190,11 @@ namespace ScrumApp.View
         }
 
         #endregion
+
+        private void ViewProject_Click(object sender, RoutedEventArgs e)
+        {
+            var project = (sender as Button).DataContext;
+            this.Frame.Navigate(typeof(ProjectView), project);
+        }
     }
 }
