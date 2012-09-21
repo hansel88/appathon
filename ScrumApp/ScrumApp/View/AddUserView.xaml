@@ -80,7 +80,7 @@
                     <x:String>Open</x:String>
                 </ComboBox>
         
-            <StackPanel Orientation="Horizontal"  Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal" Margin="0,20"  Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">
                 <Button x:Name="SaveAndExitBtn" Content="Save and exit" Click="SaveAndExitBtn_Click_1"/>
                 <Button x:Name="SaveAndAddAnotherBtn" Content="Save and add another" Click="SaveAndAddAnotherBtn_Click_1"/>
             </StackPanel>
