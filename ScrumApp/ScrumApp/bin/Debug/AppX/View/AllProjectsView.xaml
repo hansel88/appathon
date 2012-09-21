@@ -78,7 +78,7 @@
         
         <!-- Error block -->
         <TextBlock x:Name="errText" Grid.Column="1" Grid.Row="2" Style="{StaticResource SubheaderTextStyle}">
-            There is no projects added yet.
+            There are no projects added yet.
         </TextBlock>
 
         <!-- Details for selected item -->

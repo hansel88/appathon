@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ScrumApp.ViewModel;
 using SharedResources.Model;
+using SharedResources.Controller;
 
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
@@ -62,6 +63,20 @@ namespace ScrumApp.View
         /// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
+        }
+
+        private void AssigneeField_Tapped_1(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(DetailUserView), detailStoryViewModel.UserStory.Assignee);
+        }
+
+        private void CommentAuthorField_Tapped_1(object sender, TappedRoutedEventArgs e)
+        {
+            string username = (sender as TextBlock).Tag.ToString();
+            UserController uc = new UserController();
+            User author = uc.findUser(username);
+            
+            this.Frame.Navigate(typeof(DetailUserView), author);
         }
     }
 }

@@ -44,7 +44,7 @@
                 <TextBlock FontSize="25" Foreground="White" Text="{Binding UserStory.CreatedString}" HorizontalAlignment="Center"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <TextBlock FontSize="25" Foreground="White" Text="Assignee: "/>
-                    <TextBlock FontSize="25" Foreground="White" Text="{Binding UserStory.Assignee.RealName}"/>
+                    <TextBlock FontSize="25" x:Name="AssigneeField" Foreground="White" Text="{Binding UserStory.Assignee.RealName}" Tapped="AssigneeField_Tapped_1"/>
                 </StackPanel>
                 
             </StackPanel>
@@ -56,12 +56,12 @@
                     </StackPanel>
                     <StackPanel Orientation="Vertical">
                         <TextBlock Foreground="Orange" FontSize="35" Text="Comments:"/>
-                        <ListBox x:Name="CommentList" IsHitTestVisible="False" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="Transparent" Width="400" Height="500" ItemsSource="{Binding UserStory.Comments}">
+                        <ListBox x:Name="CommentList" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="Transparent" Width="400" Height="500" ItemsSource="{Binding UserStory.Comments}">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <ListBoxItem>
                                         <StackPanel Margin="-18,0,0,0" Orientation="Vertical">
-                                            <TextBlock FontSize="30" Foreground="Orange" Text="{Binding Author.RealName}" />
+                                            <TextBlock FontSize="30" x:Name="CommentAuthorField" Tag="{Binding Author.UserName}" Foreground="Orange" Text="{Binding Author.RealName}" Tapped="CommentAuthorField_Tapped_1"/>
                                             <TextBlock FontSize="25" TextWrapping="Wrap" Foreground="White" Text="{Binding Text}" />
                                         </StackPanel>
                                     </ListBoxItem>

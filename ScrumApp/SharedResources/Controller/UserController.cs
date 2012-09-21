@@ -104,5 +104,24 @@ namespace SharedResources.Controller
             }
             return false;    
         }
+
+        public User findUser(string name, bool searchForRealName = false) //Searches for username if not told otherwise
+        {
+            if (DataStructure.Users != null && DataStructure.Users.Count > 0)
+            {
+                foreach (User u in DataStructure.Users)
+                {
+                    if (u.UserName == name)
+                    {
+                        return u;
+                    }
+                }
+                return null;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }
