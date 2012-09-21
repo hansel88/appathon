@@ -107,13 +107,27 @@ namespace SharedResources.Controller
 
         public User findUser(string name, bool searchForRealName = false) //Searches for username if not told otherwise
         {
+
             if (DataStructure.Users != null && DataStructure.Users.Count > 0)
             {
-                foreach (User u in DataStructure.Users)
+                if (!searchForRealName)
                 {
-                    if (u.UserName == name)
+                    foreach (User u in DataStructure.Users)
                     {
-                        return u;
+                        if (u.UserName == name)
+                        {
+                            return u;
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (User u in DataStructure.Users)
+                    {
+                        if (u.RealName == name)
+                        {
+                            return u;
+                        }
                     }
                 }
                 return null;
