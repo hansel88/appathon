@@ -40,16 +40,16 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button
+            <Button x:ConnectionId='3'
                 x:Name="backButton"
-                Click="GoBack"
+                              
                 IsEnabled="{Binding DefaultViewModel.CanGoBack, ElementName=pageRoot}"
                 Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="All projects" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
 
         <!-- Vertical scrolling item list -->
-        <ListView
+        <ListView x:ConnectionId='1'
             x:Name="itemListView"
             AutomationProperties.AutomationId="ItemsListView"
             AutomationProperties.Name="Projects"
@@ -59,7 +59,7 @@
             Padding="120,0,0,60"
             ItemsSource="{Binding Projects}"
             IsSwipeEnabled="False"
-            SelectionChanged="ItemListView_SelectionChanged">
+                                                            >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Height="110" Margin="6">
@@ -108,7 +108,7 @@
                     <TextBlock x:Name="itemSubtitle" Margin="0,0,0,20" Text="{Binding StartToEndDate}" Style="{StaticResource TitleTextStyle}"/>
                 </StackPanel>
                 <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="0,20,0,0" Text="{Binding Description}" Style="{StaticResource BodyTextStyle}"/>
-                <Button x:Name="ViewProjectButton" Grid.Row="2" Grid.Column="1" Content="View Project" Click="ViewProject_Click" Visibility="Collapsed"/>
+                <Button x:ConnectionId='2' x:Name="ViewProjectButton" Grid.Row="2" Grid.Column="1" Content="View Project"                           Visibility="Collapsed"/>
             </Grid>
         </ScrollViewer>
 
@@ -271,3 +271,4 @@
         </VisualStateManager.VisualStateGroups>
     </Grid>
 </common:LayoutAwarePage>
+
