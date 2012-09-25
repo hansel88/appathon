@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SharedResources.Controller;
 using SharedResources.Model;
+using SharedResources.Utilities;
 
 namespace ScrumApp.ViewModel
 {
@@ -29,6 +30,14 @@ namespace ScrumApp.ViewModel
                 _currentProject = value;
                 onPropertyChanged("CurrentProject");
                 onPropertyChanged("PageTitle");
+            }
+        }
+
+        public List<User> Users
+        {
+            get
+            {
+                return DataStructure.Users;
             }
         }
 

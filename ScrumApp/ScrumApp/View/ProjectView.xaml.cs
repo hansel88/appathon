@@ -51,6 +51,7 @@ namespace ScrumApp.View
             else
             {
                 vm.CurrentProject = project;
+                SelectRegisteredUsers();
             }
         }
 
@@ -64,9 +65,24 @@ namespace ScrumApp.View
         {
         }
 
-        private void addSprintBtn_Click_1(object sender, RoutedEventArgs e)
+        private void AddSprint(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(AddSprintView), vm.CurrentProject);
+        }
+
+        private void UserSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            vm.CurrentProject.RegisteredUsers = listRegUsers.SelectedItems.Cast<User>().ToList();
+        }
+
+        private void SelectRegisteredUsers()
+        {
+            listRegUsers.SelectedItem = vm.CurrentProject.RegisteredUsers;
+        }
+
+        private void SprintChosen(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SprintView), (sender as Grid).DataContext as Sprint);
         }
     }
 }

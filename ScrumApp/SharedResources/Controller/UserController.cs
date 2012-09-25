@@ -43,7 +43,7 @@ namespace SharedResources.Controller
             if (user.IsValid())
             {
                 // Checks if the username is taken
-                if (DataStructure.Users.Where(u => u.UserName == user.UserName).Count() != 0)
+                if (DataStructure.Users.Find(u => u.UserName == user.UserName) != null)
                 {
                     throw new ArgumentException("Username taken");
                 }

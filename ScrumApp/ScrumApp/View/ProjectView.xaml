@@ -79,7 +79,7 @@
                     <ListView x:Name="listWorkItems" ItemsSource="{Binding CurrentProject.StoryQueue}" SelectionMode="None">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <Grid Height="110" Width="480" Margin="10">
+                                <Grid Height="110" Width="480" Margin="10" Background="White">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
@@ -103,13 +103,13 @@
                     <TextBlock Text="Sprints" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,20" />
                     
                     <!-- Add new sprint button -->
-                    <Grid Height="110" Width="480" Background="White">
+                    <Grid Height="110" Width="480" Background="White" Margin="0,0,0,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
-                            <Button x:Name="addSprintBtn" Style="{StaticResource AddAppBarButtonStyle}" VerticalAlignment="Center" Click="addSprintBtn_Click_1"/>
+                            <Button x:Name="addSprintBtn" Style="{StaticResource AddAppBarButtonStyle}" VerticalAlignment="Center" Click="AddSprint"/>
                         </Border>
                         <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
                             <TextBlock Text="Set up a new sprint" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap" Foreground="Black" />
@@ -121,15 +121,11 @@
                     <ListView x:Name="listSprints" ItemsSource="{Binding CurrentProject.Sprints}" SelectionMode="None">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <Grid Height="110" Width="480" Margin="10">
+                                <Grid Height="110" Width="480" Margin="0,0,0,10" Background="White" Tapped="SprintChosen">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
-                                        <Button Style="{StaticResource AddAppBarButtonStyle}" />
-                                    </Border>
-                                    <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
+                                    <StackPanel VerticalAlignment="Top" Margin="10,0,0,0">
                                         <TextBlock Text="{Binding Title}" Style="{StaticResource TitleTextStyle}" Foreground="Black" TextWrapping="Wrap"/>
                                         <TextBlock Text="{Binding StartAndEndDates}" Style="{StaticResource CaptionTextStyle}" Foreground="Gray" TextWrapping="Wrap"/>
                                         <TextBlock Text="{Binding Description}" Style="{StaticResource BodyTextStyle}" Foreground="Black" MaxHeight="60" TextWrapping="Wrap"/>
@@ -144,10 +140,11 @@
                 <StackPanel Width="600">
                     <TextBlock Text="Collaborators" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,20" />
                     
-                    <ListView x:Name="listRegUsers" ItemsSource="{Binding CurrentProject.RegisteredUsers}">
+                    <ListView x:Name="listRegUsers" ItemsSource="{Binding Users}" SelectionMode="Multiple" SelectionChanged="UserSelectionChanged">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
-                                <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="2"/>
+                                <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="2" 
+                                          ScrollViewer.VerticalScrollMode="Enabled"  ScrollViewer.VerticalScrollBarVisibility="Auto"/>
                             </ItemsPanelTemplate>
                         </ListView.ItemsPanel>
 
@@ -158,7 +155,7 @@
                                         <Image Source="{Binding GravatarImageUrl}" Stretch="UniformToFill"/>
                                     </Border>
                                     <StackPanel VerticalAlignment="Bottom" Background="{StaticResource ListViewItemOverlayBackgroundThemeBrush}">
-                                        <TextBlock Text="{Binding FullName}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0"/>
+                                        <TextBlock Text="{Binding RealName}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0"/>
                                         <TextBlock Text="{Binding Email}" Foreground="{StaticResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Style="{StaticResource CaptionTextStyle}" TextWrapping="NoWrap" Margin="15,0,15,10"/>
                                     </StackPanel>
                                 </Grid>
