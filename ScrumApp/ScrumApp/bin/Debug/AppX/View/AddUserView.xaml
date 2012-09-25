@@ -35,7 +35,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:ConnectionId='3' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/> 
         </Grid>
 <Grid Grid.Row="1" Margin="20,0,0,0">
             <Grid.ColumnDefinitions>
@@ -81,7 +81,7 @@
                 </ComboBox>
         
             <StackPanel Orientation="Horizontal" Margin="0,20"  Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">
-                <Button x:ConnectionId='1' x:Name="SaveAndExitBtn" Content="Save and exit"                               />
+                <Button x:ConnectionId='1' x:Name="SaveAndExitBtn"  Content="Save and exit"                               />
                 <Button x:ConnectionId='2' x:Name="SaveAndAddAnotherBtn" Content="Save and add another"                                     />
             </StackPanel>
         </Grid>

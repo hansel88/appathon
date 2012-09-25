@@ -120,6 +120,7 @@
       <DependentUpon>PrivacyPolicyUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\AddProjectViewModel.cs" />
+    <Compile Include="ViewModel\AddSprintViewModel.cs" />
     <Compile Include="ViewModel\AddUserStoryViewModel.cs" />
     <Compile Include="ViewModel\AddUserViewModel.cs" />
     <Compile Include="ViewModel\AllProjectsViewModel.cs" />
@@ -131,6 +132,9 @@
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\AddProjectView.xaml.cs">
       <DependentUpon>AddProjectView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddSprintView.xaml.cs">
+      <DependentUpon>AddSprintView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\AddUserStoryView.xaml.cs">
       <DependentUpon>AddUserStoryView.xaml</DependentUpon>
@@ -213,6 +217,10 @@
     <Page Include="View\AddProjectView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AddSprintView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AddUserStoryView.xaml">
       <SubType>Designer</SubType>

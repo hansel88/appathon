@@ -1,6 +1,6 @@
 ﻿<common:LayoutAwarePage
     x:Name="pageRoot"
-    x:Class="ScrumApp.View.AddUserView"
+    x:Class="ScrumApp.View.AddSprintView"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
     IsTabStop="false"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -9,12 +9,13 @@
     xmlns:common="using:ScrumApp.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="using:Telerik.UI.Xaml.Controls.Input"
     mc:Ignorable="d">
 
     <Page.Resources>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">Add user</x:String>
+        <x:String x:Key="AppName">Add sprint</x:String>
     </Page.Resources>
 
     <!--
@@ -35,15 +36,11 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/> 
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
-<Grid Grid.Row="1" Margin="20,0,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="299*" />
-                <ColumnDefinition Width="458*" />
-                <ColumnDefinition Width="140*"/>
-                <ColumnDefinition Width="449*" />
-            </Grid.ColumnDefinitions>
+        
+<!-- Main Content -->
+        <Grid Grid.Row="1" Margin="20,0,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
@@ -51,41 +48,30 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="299*" />
+                <ColumnDefinition Width="458*" />
+                <ColumnDefinition Width="140*"/>
+                <ColumnDefinition Width="449*" />
+            </Grid.ColumnDefinitions>
 
-            <TextBlock x:Name="errorBox" Grid.Row="0" Style="{StaticResource ErrorTextStyle}" />
-    
-            <TextBlock Text="Real name" Grid.Row="1" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtRealName" Style="{StaticResource BasicTextBox}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
-            <!--<TextBlock x:Name="errorBox" Style="{StaticResource ErrorTextStyle}" />-->
+            <TextBlock Text="Sprint title" Grid.Row="0" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBox x:Name="txtTitle" Grid.Row="0" Grid.Column="1" Style="{StaticResource BasicTextBox}" GotFocus="TextBoxGotFocus" />
 
-            <TextBlock Text="Username" Grid.Row="2" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtUserName" Style="{StaticResource BasicTextBox}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <TextBlock Text="Description" Grid.Row="1" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBox x:Name="txtDescription" Grid.Row="1" Grid.Column="1" Style="{StaticResource MultilineTextBox}" GotFocus="TextBoxGotFocus" />
 
-             <TextBlock Text="Desired password" Grid.Row="3" Style="{StaticResource SubheaderTextStyle}" />
-            <PasswordBox x:Name="txtPassword" IsPasswordRevealButtonEnabled="True" Style="{StaticResource BasicPasswordBox}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
-    
-            <TextBlock Text="Email" Grid.Row="4" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtEmail" Style="{StaticResource BasicTextBox}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" />
-    
-            <TextBlock Text="Phone" Grid.Row="5" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtPhone" Style="{StaticResource BasicTextBox}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"/>
-    
-            <TextBlock Text="Permission level" Grid.Row="6" Style="{StaticResource SubheaderTextStyle}" />
-                <ComboBox x:Name="PermissionBox" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2">
-                    <x:String>User</x:String>
-                    <x:String>Administrator</x:String>
-                    <x:String>Open</x:String>
-                </ComboBox>
-        
-            <StackPanel Orientation="Horizontal" Margin="0,20"  Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">
-                <Button x:Name="SaveAndExitBtn"  Content="Save and exit" Click="SaveAndExitBtn_Click_1"/>
-                <Button x:Name="SaveAndAddAnotherBtn" Content="Save and add another" Click="SaveAndAddAnotherBtn_Click_1"/>
-            </StackPanel>
+            <TextBlock Text="Start date" Grid.Row="2" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
+            <telerik:RadDatePicker x:Name="dtsStartButton" Grid.Row="2" Grid.Column="1" Style="{StaticResource RadDatePickerStyle}" ValueChanged="StartDateSet" />
+
+            <TextBlock Text="End date" Grid.Row="3" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
+            <telerik:RadDatePicker x:Name="dtsEndButton" Grid.Row="3" Grid.Column="1" IsEnabled="False" Style="{StaticResource RadDatePickerStyle}" />
+
+            <Button x:Name="btnSaveSprint" Grid.Row="4" Grid.Column="1" Content="Save project" Click="btnSaveSprint_Click_1" />
+
+            <TextBlock x:Name="errText" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource ErrorTextStyle}" Margin="0,10,0,0"/>
         </Grid>
-
 
         <VisualStateManager.VisualStateGroups>
 

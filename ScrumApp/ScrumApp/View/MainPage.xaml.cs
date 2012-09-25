@@ -77,5 +77,10 @@ namespace ScrumApp
             this.Frame.Navigate(typeof(AllProjectsView));
         }
 
+        private void AddSprintViewButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AddSprintView));
+        }
+
     }
 }
