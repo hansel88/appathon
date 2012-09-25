@@ -106,6 +106,34 @@ namespace SharedResources.Model
             }
         }
 
+        private User _scrumMaster;
+        public User ScrumMaster
+        {
+            get
+            {
+                return _scrumMaster;
+            }
+            set
+            {
+                _scrumMaster = value;
+                onPropertyChanged("ScrumMaster");
+            }
+        }
+
+        private User _projectOwner;
+        public User ProjectOwner
+        {
+            get
+            {
+                return _projectOwner;
+            }
+            set
+            {
+                _projectOwner = value;
+                onPropertyChanged("ProjectOwner");
+            }
+        }
+
         #region Derived properties
 
         public string StartToEndDate
