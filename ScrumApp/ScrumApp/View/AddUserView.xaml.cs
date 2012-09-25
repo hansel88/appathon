@@ -85,12 +85,12 @@ namespace ScrumApp.View
             }
             if (txtPassword.Password.Length < 5)
             {
-                errorBox.Text += "*The password must atleast 5 characters long.\n";
+                errorBox.Text += "*The password must at least 5 characters long.\n";
                 ok = false;
             }
             if (!IsValidEmailAddress(txtEmail.Text))
             {
-                errorBox.Text += "*Invalid email-address.\n";
+                errorBox.Text += "*Invalid email address.\n";
                 ok = false;
             }
             if (ok)

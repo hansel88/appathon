@@ -46,6 +46,8 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="299*" />
@@ -60,15 +62,33 @@
             <TextBlock Text="Description" Grid.Row="1" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
             <TextBox x:Name="txtDescription" Grid.Row="1" Grid.Column="1" Style="{StaticResource MultilineTextBox}" GotFocus="TextBoxGotFocus" />
             
-            <TextBlock Text="Start date" Grid.Row="2" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
-            <telerik:RadDatePicker x:Name="dtpStartButton" Grid.Row="2" Grid.Column="1" Style="{StaticResource RadDatePickerStyle}" ValueChanged="StartDateSet" />
+            <TextBlock Text="Project owner" Grid.Row="2" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
+            <ComboBox x:Name="cmbProjectOwner" Grid.Row="2" Grid.Column="1" Style="{StaticResource BasicComboBoxStyle}" ItemsSource="{Binding Users}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding RealName}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
             
-            <TextBlock Text="End date" Grid.Row="3" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
-            <telerik:RadDatePicker x:Name="dtpEndButton" Grid.Row="3" Grid.Column="1" IsEnabled="False" Style="{StaticResource RadDatePickerStyle}" />
+            <TextBlock Text="Scrum master" Grid.Row="3" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
+            <ComboBox x:Name="cmbScrumMaster" Grid.Row="3" Grid.Column="1" Style="{StaticResource BasicComboBoxStyle}" ItemsSource="{Binding Users}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding RealName}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
             
-            <Button x:Name="btnSaveProject" Grid.Row="4" Grid.Column="1" Content="Save project" Click="SaveProject" />
+            <TextBlock Text="Start date" Grid.Row="4" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
+            <telerik:RadDatePicker x:Name="dtpStartButton" Grid.Row="4" Grid.Column="1" Style="{StaticResource RadDatePickerStyle}" ValueChanged="StartDateSet" />
             
-            <TextBlock x:Name="errText" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource ErrorTextStyle}" Margin="0,10,0,0"/>
+            <TextBlock Text="End date" Grid.Row="5" Grid.Column="0" Style="{StaticResource SubheaderTextStyle}" />
+            <telerik:RadDatePicker x:Name="dtpEndButton" Grid.Row="5" Grid.Column="1" IsEnabled="False" Style="{StaticResource RadDatePickerStyle}" />
+            
+            <Button x:Name="btnSaveProject" Grid.Row="6" Grid.Column="1" Content="Save project" Click="SaveProject" />
+            
+            <TextBlock x:Name="errText" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource ErrorTextStyle}" Margin="0,10,0,0"/>
         </Grid>
         <VisualStateManager.VisualStateGroups>
 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SharedResources.Model;
 using SharedResources.Controller;
+using SharedResources.Utilities;
 
 namespace ScrumApp.ViewModel
 {
@@ -17,6 +18,14 @@ namespace ScrumApp.ViewModel
 
         ProjectController ctrl;
 
+        public List<User> Users
+        {
+            get
+            {
+                return DataStructure.Users;
+            }
+        }
+
         /// <summary>
         /// Attempts to save a project in the internal structure.
         /// </summary>
@@ -26,5 +35,7 @@ namespace ScrumApp.ViewModel
         {
             return ctrl.SaveProject(project);
         }
+
+
     }
 }

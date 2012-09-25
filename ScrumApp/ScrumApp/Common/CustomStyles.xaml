@@ -61,6 +61,17 @@
         <Setter Property="Margin" Value="0,0,0,20" />
     </Style>
     
+    <!-- Combo boxes -->
+    <Style x:Key="BasicComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="Background" Value="White" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Padding" Value="10,5,10,5" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="Margin" Value="0,0,0,20" />
+    </Style>
+    
     <!-- Flyouts -->
     <Style x:Key="BasicFlyoutStyle" TargetType="StackPanel">
         <Setter Property="Margin" Value="20,10,10,10" />

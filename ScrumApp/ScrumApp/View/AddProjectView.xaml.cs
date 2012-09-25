@@ -28,6 +28,7 @@ namespace ScrumApp.View
             this.InitializeComponent();
 
             vm = new AddProjectViewModel();
+            this.DataContext = vm;
 
             dtpStartButton.MinValue = DateTime.Now;
             dtpEndButton.MinValue = DateTime.Now;
@@ -70,6 +71,8 @@ namespace ScrumApp.View
             Project project = new Project();
             project.Name = txtName.Text;
             project.Description = txtDescription.Text;
+            project.ProjectOwner = (cmbProjectOwner.SelectedItem as ComboBoxItem).DataContext as User;
+            project.ScrumMaster = (cmbScrumMaster.SelectedItem as ComboBoxItem).DataContext as User;
             project.StartDate = dtpStartButton.Value ?? DateTime.Now;
             project.EndDate = dtpEndButton.Value ?? DateTime.Now;
 
@@ -115,7 +118,9 @@ namespace ScrumApp.View
             return (!String.IsNullOrWhiteSpace(txtName.Text) && 
                     !String.IsNullOrWhiteSpace(txtDescription.Text) && 
                     dtpStartButton.Value != null && 
-                    dtpEndButton.Value != null);
+                    dtpEndButton.Value != null &&
+                    cmbProjectOwner.SelectedItem != null &&
+                    cmbScrumMaster.SelectedItem != null);
         }
     }
 }
