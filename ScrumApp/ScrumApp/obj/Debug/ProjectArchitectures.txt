@@ -1,2 +1,0 @@
-C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\ScrumApp\ScrumApp.csproj;neutral
-C:\Users\selbekk\Documents\GitHub\appathon\ScrumApp\SharedResources\SharedResources.csproj;neutral
