@@ -50,11 +50,31 @@
             <StackPanel Orientation="Horizontal">
                 
                 <!-- Project information -->
-                <StackPanel Width="500">
-                    <TextBlock Text="Details" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,20" />
-                    <TextBlock Text="{Binding StartAndEndDates}" Style="{StaticResource CaptionTextStyle}" />
-                    <TextBlock Text="{Binding CurrentProject.Description}" Style="{StaticResource BodyTextStyle}" />
-                </StackPanel>
+                <Grid Width="500">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.ColumnSpan="2" Text="Details" Style="{StaticResource HeaderTextStyle}" Margin="0,0,0,20" />
+                    
+                    <TextBlock Grid.Row="1" Text="{Binding StartAndEndDates}" Style="{StaticResource CaptionTextStyle}" />
+                    <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding CurrentProject.CurrentStatusString}" Style="{StaticResource CaptionTextStyle}" />
+                    
+                    <TextBlock Grid.Row="4" Grid.ColumnSpan="2" Text="{Binding CurrentProject.Description}" Style="{StaticResource BodyTextStyle}" />
+                    
+                    <TextBlock Grid.Row="2" Text="Project owner" Style="{StaticResource SubheaderTextStyle}" VerticalAlignment="Bottom" />
+                    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding CurrentProject.ProjectOwner.RealName}" Style="{StaticResource SubheaderTextStyle}" />
+                    
+                    <TextBlock Grid.Row="3" Text="Scrum master" Style="{StaticResource SubheaderTextStyle}" VerticalAlignment="Bottom" />
+                    <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding CurrentProject.ScrumMaster.RealName}" Style="{StaticResource SubheaderTextStyle}" />
+                </Grid>
             
                 <!-- Work items -->
                 <StackPanel Width="500">

@@ -99,9 +99,6 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Controller\ProjectController.cs" />
     <Compile Include="Controller\StorageController.cs" />
     <Compile Include="Controller\UserController.cs" />
@@ -116,10 +113,16 @@
     <Compile Include="Utilities\DataStructure.cs" />
     <Compile Include="Utilities\DateUtility.cs" />
     <Compile Include="Utilities\Enums.cs" />
+    <Compile Include="Utilities\MiscUtility.cs" />
     <Compile Include="Utilities\NavigationUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Security">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Security.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

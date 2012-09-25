@@ -101,7 +101,7 @@ namespace SharedResources.Model
         {
             get
             {
-                return "http://www.gravatar.com/avatar/" + "someMD5hash" + "?s=250";
+                return "http://www.gravatar.com/avatar/" + MiscUtility.ComputeMD5(this._email) + "?s=250";
             }
         }
 

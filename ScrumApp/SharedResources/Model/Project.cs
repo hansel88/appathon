@@ -144,6 +144,45 @@ namespace SharedResources.Model
             }
         }
 
+        public string CurrentStatusString
+        {
+            get
+            {
+                if (StartDate > DateTime.Now)
+                {
+                    TimeSpan diff = (StartDate - DateTime.Now).Add(TimeSpan.FromDays(1));
+
+                    if (diff.Days == 1)
+                        return "Starts tomorrow.";
+
+                    string str = "Starts in ";
+                    str += (diff.Days > 30 ? (diff.Days % 30) + " month" : (diff.Days + " day"));
+                    if (diff.Days % 30 != 1)
+                        str += "s.";
+
+                    return str;
+                }
+
+                if (EndDate < DateTime.Now)
+                {
+                    TimeSpan diff = (DateTime.Now - EndDate);
+
+                    if (diff.Days == 0)
+                        return "Ended yesterday";
+
+                    string str = "Ended ";
+                    str += (diff.Days > 30 ? (diff.Days % 30) + " month" : diff.Days + " day");
+                    if (diff.Days % 30 != 1)
+                        str += "s ";
+                    str += "ago";
+
+                    return str;
+                }
+
+                return "Currently in progress.";
+            }
+        }
+
         #endregion
     }
 }
