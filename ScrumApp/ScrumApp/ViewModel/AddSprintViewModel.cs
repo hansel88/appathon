@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SharedResources.Model;
+using SharedResources.Controller;
+using SharedResources.Utilities;
 
 namespace ScrumApp.ViewModel
 {
@@ -22,9 +24,19 @@ namespace ScrumApp.ViewModel
                 onPropertyChanged("ProjectToBeUpdated");
             }
         }
+
+        private ProjectController ctrl;
+
+        public AddSprintViewModel()
+        {
+            ctrl = new ProjectController();
+        }
+        
         public Sprint saveSprint( Sprint sprint)
         {
-            return null;
+            sprint.Author = DataStructure.CurrentUser;
+            ProjectToBeUpdated.Sprints.Add(sprint);
+            return sprint;
         }
     }
 }
