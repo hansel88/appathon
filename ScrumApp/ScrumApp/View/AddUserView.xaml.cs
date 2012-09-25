@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Navigation;
 using ScrumApp.ViewModel;
 using System.Text.RegularExpressions;
 using SharedResources.Utilities;
+using SharedResources.Model;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -24,12 +25,12 @@ namespace ScrumApp.View
     /// </summary>
     public sealed partial class AddUserView : ScrumApp.Common.LayoutAwarePage
     {
-        private AddUserViewModel addUserViewModel;
+        private AddUserViewModel vm;
 
         public AddUserView()
         {
             this.InitializeComponent();
-            addUserViewModel = new AddUserViewModel();
+            vm = new AddUserViewModel();
         }
 
         /// <summary>
@@ -55,9 +56,9 @@ namespace ScrumApp.View
         {
         }
 
-        private void SaveAndAddAnotherBtn_Click_1(object sender, RoutedEventArgs e)
+        private void SaveAndAddAnother(object sender, RoutedEventArgs e)
         {
-            if (saveUser())
+            if (SaveUser())
             {
                 // clear fields, everything went OK
                 clearErrorText();
@@ -65,52 +66,68 @@ namespace ScrumApp.View
             }
         }
 
-        private void SaveAndExitBtn_Click_1(object sender, RoutedEventArgs e)
+        private void SaveAndExit(object sender, RoutedEventArgs e)
         {
-            if (saveUser())
+            if (SaveUser())
             {
                 this.Frame.GoBack();
             }
         }
 
-        private bool saveUser()
+        private bool SaveUser()
         {
-            bool ok = true;
-
-            if (txtRealName.Text.Length == 0 || txtUserName.Text.Length == 0 || txtEmail.Text.Length == 0 || txtPhone.Text.Length == 0 || PermissionBox.SelectedItem == null)
+            if (!IsValid())
             {
-                errorBox.Text = "*Name, Username, email and permission level must be filled in.\n";
-                errorBox.Visibility = Visibility.Visible;
-                ok = false;
-            }
-            if (txtPassword.Password.Length < 5)
-            {
-                errorBox.Text += "*The password must at least 5 characters long.\n";
-                ok = false;
-            }
-            if (!IsValidEmailAddress(txtEmail.Text))
-            {
-                errorBox.Text += "*Invalid email address.\n";
-                ok = false;
-            }
-            if (ok)
-            {
-                if (DataStructure.Users.Find(u => u.UserName == txtUserName.Text) == null)
-                {
-                    addUserViewModel.saveUser(txtRealName.Text, txtUserName.Text, txtPassword.Password, txtEmail.Text, txtPhone.Text, PermissionBox.SelectedItem as string);
-                    return true;
-                }
-                else
-                {
-                    errorBox.Text = "*This username is already taken.\n";
-                    return false;
-                }
-            }
-            else
-            {
+                setError(App.Current.Resources["errRequiredFieldsEmpty"] as String);
                 return false;
             }
 
+            // Checks for valid email
+            if (!IsValidEmailAddress(txtEmail.Text))
+            {
+                setError(App.Current.Resources["errMisformedEmail"] as String);
+                return false;
+            }
+
+            // Creates a User-object
+            User user = new User()
+            {
+                RealName = txtRealName.Text,
+                UserName = txtUserName.Text,
+                Email = txtEmail.Text,
+                Password = txtPassword.Password,
+                PhoneNumber = txtPhone.Text,
+                AccessLevel = ((PermissionBox.SelectedItem as String) == "Administrator" ? PermissionLevel.AdminOnly : PermissionLevel.UserOnly)
+            };
+
+            // Tries to register the user 
+            try
+            {
+                vm.SaveUser(user);
+                return true;
+            }
+            catch (ArgumentException ex)
+            {
+                if (ex.Message == "Username taken")
+                {
+                    setError("The username is already taken.");
+                    return false;
+                }
+                else // User object is not valid.
+                {
+                    setError(App.Current.Resources["errGeneralError"] as String);
+                    return false;
+                }
+            }
+        }
+
+        private bool IsValid()
+        { 
+            return (!String.IsNullOrWhiteSpace(txtRealName.Text) &&
+                    !String.IsNullOrWhiteSpace(txtUserName.Text) &&
+                    !String.IsNullOrWhiteSpace(txtEmail.Text) &&
+                    !String.IsNullOrWhiteSpace(txtPhone.Text) &&
+                    !String.IsNullOrWhiteSpace(txtPassword.Password));
         }
 
         private bool IsValidEmailAddress(string email)
@@ -125,6 +142,12 @@ namespace ScrumApp.View
             errorBox.Visibility = Visibility.Collapsed;
         }
 
+        private void setError(string error)
+        {
+            errorBox.Text = error;
+            errorBox.Visibility = Visibility.Visible;
+        }
+
 
         private void clearFields()
         {
@@ -133,6 +156,11 @@ namespace ScrumApp.View
             txtPassword.Password = "";
             txtEmail.Text = "";
             txtPhone.Text = "";
+        }
+
+        private void FieldFocused(object sender, RoutedEventArgs e)
+        {
+            clearErrorText();
         }
     }
 }

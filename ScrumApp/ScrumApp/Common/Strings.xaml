@@ -9,5 +9,6 @@
     <x:String x:Key="errGeneralError">Something went wrong while performing this action.</x:String>
     <x:String x:Key="errRequiredFieldsEmpty">Some information is missing.</x:String>
     <x:String x:Key="errInvalidLogin">The username or password was not recognized.</x:String>
+    <x:String x:Key="errMisformedEmail">The email you entered doesn't seem to be correctly formatted.</x:String>
     
 </ResourceDictionary>

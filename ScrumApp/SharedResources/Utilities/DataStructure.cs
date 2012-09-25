@@ -13,19 +13,12 @@ namespace SharedResources.Utilities
 
         public static List<Project> Projects { get; set; }
 
-        private static List<User> _users;
+        private static List<User> _users = new List<User>();
         public static List<User> Users 
         {
             get
             {
-                if (_users == null)
-                {
-                    return new List<User>();
-                }
-                else
-                {
-                    return _users;
-                }
+                return _users;
             }
             set
             {

@@ -37,24 +37,24 @@ namespace SharedResources.Controller
         /// </summary>
         /// <param name="user">The user object to register</param>
         /// <exception cref="ArgumentException">The User-object was not valid</exception>
-        public bool RegisterUser(User user)
+        /// <exception cref="ArgumentException">The Username is taken</exception>
+        public void RegisterUser(User user)
         {
             if (user.IsValid())
             {
                 // Checks if the username is taken
-                if (DataStructure.Users.Where(u => u.UserName == user.UserName).First() != null)
+                if (DataStructure.Users.Where(u => u.UserName == user.UserName).Count() != 0)
                 {
-                    return false;
+                    throw new ArgumentException("Username taken");
                 }
                 else
                 {
                     DataStructure.Users.Add(user);
-                    return true;
                 }
             }
             else
             {
-                throw new ArgumentException("User-object is not valid.");
+                throw new ArgumentException("User is not valid.");
             }
         }
 

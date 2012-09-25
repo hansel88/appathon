@@ -5,34 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using SharedResources.Utilities;
 using SharedResources.Model;
+using SharedResources.Controller;
 
 namespace ScrumApp.ViewModel
 {
-    class AddUserViewModel : ViewModelBase
+    public class AddUserViewModel : ViewModelBase
     {
-        public void saveUser(string name, string userName, string password, string email, string phone, string permissionLevelString)
+        private UserController ctrl;
+
+        public AddUserViewModel(UserController ctrl = null)
         {
-            PermissionLevel permissionLevel = new PermissionLevel();
-            switch (permissionLevelString)
-            {
-                case "User": permissionLevel = PermissionLevel.UserOnly; 
-                    break;
-                case "Administrator": permissionLevel = PermissionLevel.AdminOnly;
-                    break;
-                case "Open": permissionLevel = PermissionLevel.Open;
-                    break;
-            }
+            this.ctrl = (ctrl != null ? ctrl : new UserController());
+        }
 
-            User newUser = new User();
-
-            newUser.RealName = name;
-            newUser.UserName = userName;
-            newUser.Password = password;
-            newUser.Email = email;
-            newUser.PhoneNumber = phone;
-            newUser.AccessLevel = permissionLevel;
-
-            DataStructure.Users.Add(newUser);
+        public void SaveUser(User user)
+        {
+            ctrl.RegisterUser(user);
         }
     }
 }

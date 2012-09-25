@@ -71,8 +71,8 @@ namespace ScrumApp.View
             Project project = new Project();
             project.Name = txtName.Text;
             project.Description = txtDescription.Text;
-            project.ProjectOwner = (cmbProjectOwner.SelectedItem as ComboBoxItem).DataContext as User;
-            project.ScrumMaster = (cmbScrumMaster.SelectedItem as ComboBoxItem).DataContext as User;
+            project.ProjectOwner = cmbProjectOwner.SelectedItem as User;
+            project.ScrumMaster = cmbScrumMaster.SelectedItem as User;
             project.StartDate = dtpStartButton.Value ?? DateTime.Now;
             project.EndDate = dtpEndButton.Value ?? DateTime.Now;
 
