@@ -63,5 +63,10 @@ namespace ScrumApp.View
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
         }
+
+        private void addSprintBtn_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AddSprintView), vm.CurrentProject);
+        }
     }
 }

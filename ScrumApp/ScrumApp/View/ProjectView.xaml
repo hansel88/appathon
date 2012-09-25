@@ -109,7 +109,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="110" Height="110">
-                            <Button Style="{StaticResource AddAppBarButtonStyle}" VerticalAlignment="Center"/>
+                            <Button x:Name="addSprintBtn" Style="{StaticResource AddAppBarButtonStyle}" VerticalAlignment="Center" Click="addSprintBtn_Click_1"/>
                         </Border>
                         <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="10,0,0,0">
                             <TextBlock Text="Set up a new sprint" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap" Foreground="Black" />

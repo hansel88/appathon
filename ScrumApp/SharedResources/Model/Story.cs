@@ -154,7 +154,7 @@ namespace SharedResources.Model
             }
         }
 
-        private List<StoryStateChange> _stateChanges;
+        private List<StoryStateChange> _stateChanges = new List<StoryStateChange>();
         public List<StoryStateChange> StateChanges
         {
             get

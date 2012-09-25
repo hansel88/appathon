@@ -22,7 +22,7 @@ namespace SharedResources.Model
             }
         }
 
-        private List<Story> _stories;
+        private List<Story> _stories = new List<Story>();
         public List<Story> Stories
         {
             get

@@ -8,7 +8,7 @@ namespace SharedResources.Model
 {
     public class Project : ModelBase
     {
-        private List<Sprint> _sprints;
+        private List<Sprint> _sprints = new List<Sprint>();
         public List<Sprint> Sprints
         {
             get
@@ -22,7 +22,7 @@ namespace SharedResources.Model
             }
         }
 
-        private List<Story> _storyQueue;
+        private List<Story> _storyQueue = new List<Story>();
         public List<Story> StoryQueue
         {
             get
@@ -92,7 +92,7 @@ namespace SharedResources.Model
             }
         }
 
-        private List<User> _registeredUsers;
+        private List<User> _registeredUsers = new List<User>();
         public List<User> RegisteredUsers
         {
             get
