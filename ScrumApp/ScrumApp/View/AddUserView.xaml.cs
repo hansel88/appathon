@@ -143,7 +143,7 @@ namespace ScrumApp.View
         }
 
         private void setError(string error)
-        {
+        {  
             errorBox.Text = error;
             errorBox.Visibility = Visibility.Visible;
         }

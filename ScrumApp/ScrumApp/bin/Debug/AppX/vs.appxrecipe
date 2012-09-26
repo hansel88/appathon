@@ -16,21 +16,21 @@
     <AppXManifest Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-09-25T14:45:36.205</Modified>
+      <Modified>2012-09-25T15:00:03.908</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.exe">
       <PackagePath>ScrumApp.exe</PackagePath>
-      <Modified>2012-09-25T14:58:24.004</Modified>
+      <Modified>2012-09-26T10:12:01.777</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\ScrumApp.pdb">
       <PackagePath>ScrumApp.pdb</PackagePath>
-      <Modified>2012-09-25T14:58:23.992</Modified>
+      <Modified>2012-09-26T10:12:01.767</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.pdb">
       <PackagePath>SharedResources.pdb</PackagePath>
-      <Modified>2012-09-25T14:58:22.408</Modified>
+      <Modified>2012-09-26T10:12:00.097</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.Core.dll">
       <PackagePath>Telerik.Core.dll</PackagePath>
@@ -54,7 +54,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\SharedResources\bin\Debug\SharedResources.dll">
       <PackagePath>SharedResources.dll</PackagePath>
-      <Modified>2012-09-25T14:58:22.419</Modified>
+      <Modified>2012-09-26T10:12:00.111</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files (x86)\Telerik\RadControls for Metro XAML Q1 2012 RC\ExtensionSDK\References\CommonConfiguration\neutral\Telerik.Core.xml">
       <PackagePath>Telerik.Core.xml</PackagePath>
@@ -162,7 +162,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\CustomStyles.xaml">
       <PackagePath>Common\CustomStyles.xaml</PackagePath>
-      <Modified>2012-09-20T16:03:52.331</Modified>
+      <Modified>2012-09-25T15:00:02.441</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
@@ -170,7 +170,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Common\Strings.xaml">
       <PackagePath>Common\Strings.xaml</PackagePath>
-      <Modified>2012-09-20T13:35:16.873</Modified>
+      <Modified>2012-09-25T15:14:06.535</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\Controls\AboutUserControl.xaml">
       <PackagePath>Controls\AboutUserControl.xaml</PackagePath>
@@ -186,7 +186,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddProjectView.xaml">
       <PackagePath>View\AddProjectView.xaml</PackagePath>
-      <Modified>2012-09-20T13:35:16.880</Modified>
+      <Modified>2012-09-25T15:00:02.443</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddSprintView.xaml">
       <PackagePath>View\AddSprintView.xaml</PackagePath>
@@ -198,7 +198,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AddUserView.xaml">
       <PackagePath>View\AddUserView.xaml</PackagePath>
-      <Modified>2012-09-25T13:17:26.184</Modified>
+      <Modified>2012-09-25T15:14:06.538</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\AllProjectsView.xaml">
       <PackagePath>View\AllProjectsView.xaml</PackagePath>
@@ -222,7 +222,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\ProjectView.xaml">
       <PackagePath>View\ProjectView.xaml</PackagePath>
-      <Modified>2012-09-25T14:53:29.690</Modified>
+      <Modified>2012-09-26T10:10:36.578</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HPL\Documents\GitHub\appathon\ScrumApp\ScrumApp\bin\Debug\View\SprintView.xaml">
       <PackagePath>View\SprintView.xaml</PackagePath>

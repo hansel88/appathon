@@ -34,7 +34,7 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='3' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
+            <Button x:ConnectionId='4' x:Name="backButton"                IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/> 
         </Grid>
 <Grid Grid.Row="1" Margin="20,0,0,0">
@@ -54,36 +54,34 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
+    
+            <TextBlock Text="Real name" Grid.Row="0" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBox x:ConnectionId='1' x:Name="txtRealName" Style="{StaticResource BasicTextBox}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"                        />
 
-            <TextBlock x:Name="errorBox" Grid.Row="0" Style="{StaticResource ErrorTextStyle}" />
-    
-            <TextBlock Text="Real name" Grid.Row="1" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtRealName" Style="{StaticResource BasicTextBox}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
-            <!--<TextBlock x:Name="errorBox" Style="{StaticResource ErrorTextStyle}" />-->
+            <TextBlock Text="Username" Grid.Row="1" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBox x:Name="txtUserName" Style="{StaticResource BasicTextBox}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
 
-            <TextBlock Text="Username" Grid.Row="2" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtUserName" Style="{StaticResource BasicTextBox}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
-
-             <TextBlock Text="Desired password" Grid.Row="3" Style="{StaticResource SubheaderTextStyle}" />
-            <PasswordBox x:Name="txtPassword" IsPasswordRevealButtonEnabled="True" Style="{StaticResource BasicPasswordBox}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+             <TextBlock Text="Desired password" Grid.Row="2" Style="{StaticResource SubheaderTextStyle}" />
+            <PasswordBox x:Name="txtPassword" IsPasswordRevealButtonEnabled="True" Style="{StaticResource BasicPasswordBox}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
     
-            <TextBlock Text="Email" Grid.Row="4" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtEmail" Style="{StaticResource BasicTextBox}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" />
+            <TextBlock Text="Email" Grid.Row="3" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBox x:Name="txtEmail" Style="{StaticResource BasicTextBox}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" />
     
-            <TextBlock Text="Phone" Grid.Row="5" Style="{StaticResource SubheaderTextStyle}" />
-            <TextBox x:Name="txtPhone" Style="{StaticResource BasicTextBox}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <TextBlock Text="Phone" Grid.Row="4" Style="{StaticResource SubheaderTextStyle}" />
+            <TextBox x:Name="txtPhone" Style="{StaticResource BasicTextBox}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
     
-            <TextBlock Text="Permission level" Grid.Row="6" Style="{StaticResource SubheaderTextStyle}" />
-                <ComboBox x:Name="PermissionBox" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2">
-                    <x:String>User</x:String>
-                    <x:String>Administrator</x:String>
-                    <x:String>Open</x:String>
-                </ComboBox>
+            <TextBlock Text="Permission level" Grid.Row="5" Style="{StaticResource SubheaderTextStyle}" />
+            <ComboBox x:Name="PermissionBox" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2">
+                <x:String>User</x:String>
+                <x:String>Administrator</x:String>
+            </ComboBox>
         
-            <StackPanel Orientation="Horizontal" Margin="0,20"  Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2">
-                <Button x:ConnectionId='1' x:Name="SaveAndExitBtn"  Content="Save and exit"                               />
-                <Button x:ConnectionId='2' x:Name="SaveAndAddAnotherBtn" Content="Save and add another"                                     />
+            <StackPanel Orientation="Horizontal" Margin="0,20"  Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2">
+                <Button x:ConnectionId='2' x:Name="SaveAndExitBtn"  Content="Save and exit"                    />
+                <Button x:ConnectionId='3' x:Name="SaveAndAddAnotherBtn" Content="Save and add another"                          />
             </StackPanel>
+        
+            <TextBlock x:Name="errorBox" Grid.Row="7" Grid.Column="1" Style="{StaticResource ErrorTextStyle}" />
         </Grid>
 
 
