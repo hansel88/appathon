@@ -77,7 +77,13 @@ namespace ScrumApp.View
 
         private void SelectRegisteredUsers()
         {
-            listRegUsers.SelectedItem = vm.CurrentProject.RegisteredUsers;
+            // TODO: listRegUsers.Items is empty for some reason.
+            for (int i = 0; i < listRegUsers.Items.Count; i++)
+            {
+                var item = listRegUsers.ItemContainerGenerator.ContainerFromIndex(i) as ListViewItem;
+                if (vm.CurrentProject.RegisteredUsers.Find(u => u == item.DataContext) != null)
+                    item.IsSelected = true;
+            }
         }
 
         private void SprintChosen(object sender, TappedRoutedEventArgs e)
