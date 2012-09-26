@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace SharedResources.Model
 {
+    [DataContract]
     public class Comment : ModelBase
     {
         private User _author;
+        [DataMember]
         public User Author
         {
             get
@@ -23,6 +26,7 @@ namespace SharedResources.Model
         }
 
         private string _text;
+        [DataMember]
         public string Text
         {
             get
@@ -37,6 +41,7 @@ namespace SharedResources.Model
         }
 
         private DateTime _timeStamp;
+        [DataMember]
         public DateTime TimeStamp
         {
             get

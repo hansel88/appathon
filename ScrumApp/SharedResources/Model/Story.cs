@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SharedResources.Utilities;
+using System.Runtime.Serialization;
 
 namespace SharedResources.Model
 {
+    [DataContract]
     public class Story : ModelBase
     {
         private string _title;
+        [DataMember]
         public string Title
         {
             get
@@ -24,6 +27,7 @@ namespace SharedResources.Model
         }
 
         private DateTime _createdDate;
+        [DataMember]
         public DateTime CreatedDate
         {
             get
@@ -54,6 +58,7 @@ namespace SharedResources.Model
         }
 
         private string _description;
+        [DataMember]
         public string Description
         {
             get
@@ -68,6 +73,7 @@ namespace SharedResources.Model
         }
 
         private int _priority;
+        [DataMember]
         public int Priority
         {
             get
@@ -82,6 +88,7 @@ namespace SharedResources.Model
         }
 
         private User _author;
+        [DataMember]
         public User Author
         {
             get
@@ -96,6 +103,7 @@ namespace SharedResources.Model
         }
 
         private User _assignee;
+        [DataMember]
         public User Assignee
         {
             get
@@ -113,6 +121,7 @@ namespace SharedResources.Model
         }
 
         private Story _parentStory;
+        [DataMember]
         public Story ParentStory
         {
             get
@@ -127,6 +136,7 @@ namespace SharedResources.Model
         }
 
         private string[] _tags;
+        [DataMember]
         public string[] Tags
         {
             get
@@ -141,6 +151,7 @@ namespace SharedResources.Model
         }
 
         private StoryStates _state;
+        [DataMember]
         public StoryStates State
         {
             get
@@ -155,6 +166,7 @@ namespace SharedResources.Model
         }
 
         private List<StoryStateChange> _stateChanges = new List<StoryStateChange>();
+        [DataMember]
         public List<StoryStateChange> StateChanges
         {
             get
@@ -169,6 +181,7 @@ namespace SharedResources.Model
         }
 
         private List<Comment> _comments = new List<Comment>();
+        [DataMember]
         public List<Comment> Comments
         {
             get
@@ -183,6 +196,7 @@ namespace SharedResources.Model
         }
 
         private bool _isBlocked = false;
+        [DataMember]
         public bool IsBlocked
         {
             get

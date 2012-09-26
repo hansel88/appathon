@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace SharedResources.Model
 {
+    [DataContract]
     public class Sprint : ModelBase
     {
         private string _title;
@@ -23,6 +25,7 @@ namespace SharedResources.Model
         }
 
         private List<Story> _stories = new List<Story>();
+        [DataMember]
         public List<Story> Stories
         {
             get
@@ -37,6 +40,7 @@ namespace SharedResources.Model
         }
 
         private DateTime _startTime;
+        [DataMember]
         public DateTime StartTime
         {
             get
@@ -51,6 +55,7 @@ namespace SharedResources.Model
         }
 
         private DateTime _endTime;
+        [DataMember]
         public DateTime EndTime
         {
             get
@@ -65,6 +70,7 @@ namespace SharedResources.Model
         }
 
         private User _author;
+        [DataMember]
         public User Author
         {
             get
@@ -79,6 +85,7 @@ namespace SharedResources.Model
         }
 
         private string _description;
+        [DataMember]
         public string Description
         {
             get

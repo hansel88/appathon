@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SharedResources.Utilities;
+using System.Runtime.Serialization;
 
 namespace SharedResources.Model
 {
+    [DataContract]
     public class StoryStateChange : ModelBase
     {
         private DateTime _timeStamp;
+        [DataMember]
         public DateTime TimeStamp
         {
             get
@@ -24,6 +27,7 @@ namespace SharedResources.Model
         }
 
         private StoryStates _oldState;
+        [DataMember]
         public StoryStates OldState
         {
             get
@@ -38,6 +42,7 @@ namespace SharedResources.Model
         }
 
         private StoryStates _newState;
+        [DataMember]
         public StoryStates NewState
         {
             get
@@ -52,6 +57,7 @@ namespace SharedResources.Model
         }
 
         private User _oldAsignee;
+        [DataMember]
         public User OldAsignee
         {
             get
@@ -66,6 +72,7 @@ namespace SharedResources.Model
         }
 
         private User _newAsignee;
+        [DataMember]
         public User NewAsignee
         {
             get
@@ -78,8 +85,5 @@ namespace SharedResources.Model
                 onPropertyChanged("NewAsignee");
             }
         }
-
-        
-
     }
 }

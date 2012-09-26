@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace SharedResources.Model
 {
+    [DataContract]
     public class Project : ModelBase
     {
         private List<Sprint> _sprints = new List<Sprint>();
+        [DataMember]
         public List<Sprint> Sprints
         {
             get
@@ -23,6 +26,7 @@ namespace SharedResources.Model
         }
 
         private List<Story> _storyQueue = new List<Story>();
+        [DataMember]
         public List<Story> StoryQueue
         {
             get
@@ -37,6 +41,7 @@ namespace SharedResources.Model
         }
 
         private string _name;
+        [DataMember]
         public string Name
         {
             get
@@ -51,6 +56,7 @@ namespace SharedResources.Model
         }
 
         private string _description;
+        [DataMember]
         public string Description
         {
             get
@@ -65,6 +71,7 @@ namespace SharedResources.Model
         }
 
         private DateTime _startDate;
+        [DataMember]
         public DateTime StartDate
         {
             get
@@ -79,6 +86,7 @@ namespace SharedResources.Model
         }
 
         private DateTime _endDate;
+        [DataMember]
         public DateTime EndDate
         {
             get
@@ -93,6 +101,7 @@ namespace SharedResources.Model
         }
 
         private List<User> _registeredUsers = new List<User>();
+        [DataMember]
         public List<User> RegisteredUsers
         {
             get
@@ -107,6 +116,7 @@ namespace SharedResources.Model
         }
 
         private User _scrumMaster;
+        [DataMember]
         public User ScrumMaster
         {
             get
@@ -121,6 +131,7 @@ namespace SharedResources.Model
         }
 
         private User _projectOwner;
+        [DataMember]
         public User ProjectOwner
         {
             get
@@ -140,7 +151,7 @@ namespace SharedResources.Model
         {
             get
             {
-                return StartDate.ToString("d") + " - " + EndDate.ToString("d");
+                return StartDate.ToString("d") + " - " + EndDate.ToString("d") + " (" + (EndDate - StartDate).Days + " days)";
             }
         }
 

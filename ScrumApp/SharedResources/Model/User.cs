@@ -4,15 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SharedResources.Utilities;
+using System.Runtime.Serialization;
 
 namespace SharedResources.Model
 {
+    [DataContract]
     public class User : ModelBase
     {
-
         #region Properties
  
         private string _userName;
+        [DataMember]
         public string UserName
         {
             get
@@ -27,6 +29,7 @@ namespace SharedResources.Model
         }
 
         private string _realName;
+        [DataMember]
         public string RealName
         {
             get
@@ -41,6 +44,7 @@ namespace SharedResources.Model
         }
 
         private string _email;
+        [DataMember]
         public string Email
         {
             get
@@ -56,6 +60,7 @@ namespace SharedResources.Model
         }
 
         private string _password;
+        [DataMember]
         public string Password
         {
             get
@@ -70,6 +75,7 @@ namespace SharedResources.Model
         }
 
         private string _phoneNumber;
+        [DataMember]
         public string PhoneNumber
         {
             get
@@ -84,6 +90,7 @@ namespace SharedResources.Model
         }
 
         private PermissionLevel _accessLevel;
+        [DataMember]
         public PermissionLevel AccessLevel
         {
             get
